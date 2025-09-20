@@ -164,11 +164,9 @@ nav a {
 }
 .hero-slider {
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
-  margin-top: 0;
-  border-top: none;
 }
 
 .slide {
@@ -182,8 +180,6 @@ nav a {
   opacity: 0;
   transition: opacity 1s ease-in-out;
   z-index: 1;
-  border: none;
-  box-shadow: none;
 }
 
 .slide.active {
@@ -262,6 +258,7 @@ nav a {
 .slider-dots .dot.active {
   background-color: #85E330;
 }
+
 .search-box {
   position: relative;
   margin-left: auto;
