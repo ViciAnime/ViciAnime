@@ -6,36 +6,39 @@ body {
 }
 
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: rgba(0, 0, 0, 0.3); /* semitransparente */
-  backdrop-filter: blur(4px);     /* efecto de desenfoque */
+  background: transparent;
+  pointer-events: none; /* evita que bloquee clics si lo deseas */
 }
 
 .logo {
   font-family: 'Orbitron', sans-serif;
   font-size: 1.5rem;
   color: #ffffff;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+  pointer-events: auto;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   gap: 1.5rem;
+  pointer-events: auto;
 }
 
 nav a {
   text-decoration: none;
   color: #ffffff;
   font-weight: bold;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
 }
 
 .destacado {
