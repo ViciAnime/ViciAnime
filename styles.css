@@ -135,4 +135,17 @@ nav a {
   font-size: 0.9rem;
   color: #85E330;
 }
+.scroll-text {
+  max-height: 150px; /* Puedes ajustar la altura */
+  overflow-y: auto;
+  padding: 1rem;
+  background-color: #16213e;
+  border-radius: 8px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
+  margin-top: 1rem;
+}
+.scroll-text p {
+  margin: 0;
+  line-height: 1.6;
+}
 
