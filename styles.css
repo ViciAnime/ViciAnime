@@ -242,12 +242,12 @@ nav a {
 
 .slider-dots {
   position: absolute;
-  bottom: 10px;
+  bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   gap: 10px;
-  z-index: 101;
+  z-index: 10;
 }
 
 .slider-dots .dot {
