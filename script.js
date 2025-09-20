@@ -46,3 +46,41 @@ function resetInterval() {
 // Mostrar el primer slide al cargar
 showSlide(currentSlide);
 
+<script>
+  const searchInput = document.getElementById('anime-search');
+  const resultsBox = document.getElementById('search-results');
+
+  const animes = [
+    "Naruto", "One Piece", "Attack on Titan", "Jujutsu Kaisen",
+    "Demon Slayer", "Death Note", "Dragon Ball", "Bleach",
+    "My Hero Academia", "Tokyo Ghoul", "Chainsaw Man"
+  ];
+
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value.toLowerCase();
+    resultsBox.innerHTML = '';
+
+    if (query.length === 0) {
+      resultsBox.style.display = 'none';
+      return;
+    }
+
+    const filtered = animes.filter(anime => anime.toLowerCase().includes(query));
+
+    if (filtered.length > 0) {
+      filtered.forEach(anime => {
+        const li = document.createElement('li');
+        li.textContent = anime;
+        resultsBox.appendChild(li);
+      });
+      resultsBox.style.display = 'block';
+    } else {
+      resultsBox.style.display = 'none';
+    }
+  });
+
+  searchInput.addEventListener('blur', () => {
+    setTimeout(() => resultsBox.style.display = 'none', 200);
+  });
+</script>
+
