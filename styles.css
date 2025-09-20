@@ -38,6 +38,14 @@ header {
   transform: translateY(-100%);
 }
 
+.logo a {
+  display: inline-block;
+}
+
+.logo a img {
+  display: block;
+}
+
 .logo img {
   height: 70px;
   width: auto;
