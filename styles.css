@@ -21,8 +21,8 @@ header {
 }
 
 .logo img {
-  height: 70px;
-  width: auto;
+  height: 70px !important;
+  width: auto !important;
   margin-right: 2rem; /* espacio entre logo y menú */
 }
 
