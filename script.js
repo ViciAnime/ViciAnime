@@ -1,23 +1,3 @@
-function filtrarAnime() {
-  const input = document.getElementById("searchInput").value.toLowerCase();
-  document.querySelectorAll(".anime-card").forEach(card => {
-    const titulo = card.querySelector("h3").textContent.toLowerCase();
-    card.style.display = titulo.includes(input) ? "block" : "none";
-  });
-}
-
-function filtrarEstado(estado) {
-  document.querySelectorAll(".filtros button").forEach(btn => btn.classList.remove("activo"));
-  event.target.classList.add("activo");
-
-  document.querySelectorAll(".anime-card").forEach(card => {
-    if (estado === "all") {
-      card.style.display = "block";
-    } else {
-      card.style.display = card.dataset.status === estado ? "block" : "none";
-    }
-  });
-}
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
 const totalSlides = slides.length;
@@ -49,7 +29,7 @@ function showSlide(index) {
   });
 }
 
-// Auto-rotación más lenta (12 segundos)
+// Auto-rotación cada 12 segundos
 let slideInterval = setInterval(() => {
   currentSlide = (currentSlide + 1) % totalSlides;
   showSlide(currentSlide);
@@ -65,3 +45,4 @@ function resetInterval() {
 
 // Mostrar el primer slide al cargar
 showSlide(currentSlide);
+
