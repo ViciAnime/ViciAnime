@@ -25,6 +25,11 @@ header {
   padding: 1rem 2rem;
   background-color: transparent;
   box-shadow: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hide-header {
+  transform: translateY(-100%);
 }
 
 .logo img {
