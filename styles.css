@@ -222,29 +222,6 @@ nav a {
   font-weight: bold;
 }
 
-.slider-controls {
-  position: absolute;
-  bottom: 30px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 2rem;
-  z-index: 3;
-}
-
-.slider-controls button {
-  background: rgba(0,0,0,0.5);
-  border: none;
-  color: white;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.slider-controls button:hover {
-  background: rgba(0,0,0,0.8);
-}
 .slider-dots {
   position: absolute;
   bottom: 30px;
