@@ -310,3 +310,9 @@ nav a {
   background-color: #eee;
 }
 
+.page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
