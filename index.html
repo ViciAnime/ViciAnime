@@ -22,20 +22,52 @@
       </ul>
     </nav>
   </header>
-  <section class="destacado">
-    <img src="assets/imagenes/gachiakuta.jpg" alt="Gachiakuta">
-    <div class="info">
+  <section class="hero-slider">
+  <div class="slide active" style="background-image: url('assets/images/gachiakuta.jpg');">
+    <div class="overlay">
       <h1>Gachiakuta</h1>
-      <div class="scroll-text">
-  <p>
-    Rudo vive en los barrios bajos y lucha contra la injusticia de una ciudad dividida por clases. Su vida cambia cuando es acusado injustamente de un crimen que no cometió. Expulsado al mundo de la basura, descubre un universo oculto lleno de peligros, criaturas extrañas y secretos que podrían cambiar el destino de la ciudad. A medida que se enfrenta a nuevos enemigos y aliados, Rudo deberá encontrar su propósito y luchar por la verdad en un mundo que lo ha rechazado. Esta historia mezcla acción, fantasía y crítica social en una narrativa intensa y visualmente impactante...
-  </p>
-</div>
-      <div class="tags"><span>Acción</span><span>Fantasía</span><span>Shōnen</span></div>
+      <p>Rudo y su padre adoptivo, Regto, viven en los barrios bajos de una ciudad rica e intentan convivir con el resto de los habitantes, pero Rudo desprecia el derroche de la clase alta...</p>
+      <div class="tags">
+        <span>Acción</span>
+        <span>Fantasía</span>
+        <span>Shōnen</span>
+      </div>
       <a href="#" class="ver-btn">Ver ahora</a>
     </div>
-  </section>
+  </div>
 
+  <div class="slide" style="background-image: url('assets/images/jujutsu.jpg');">
+    <div class="overlay">
+      <h1>Jujutsu Kaisen</h1>
+      <p>Yuji Itadori se une a una organización secreta para eliminar maldiciones tras ingerir un objeto maldito...</p>
+      <div class="tags">
+        <span>Acción</span>
+        <span>Sobrenatural</span>
+        <span>Shōnen</span>
+      </div>
+      <a href="#" class="ver-btn">Ver ahora</a>
+    </div>
+  </div>
+
+  <div class="slide" style="background-image: url('assets/images/onepiece.jpg');">
+    <div class="overlay">
+      <h1>One Piece</h1>
+      <p>Monkey D. Luffy zarpa en busca del tesoro legendario para convertirse en el Rey de los Piratas...</p>
+      <div class="tags">
+        <span>Aventura</span>
+        <span>Acción</span>
+        <span>Shōnen</span>
+      </div>
+      <a href="#" class="ver-btn">Ver ahora</a>
+    </div>
+  </div>
+
+  <div class="slider-controls">
+    <button id="prev">&#10094;</button>
+    <button id="next">&#10095;</button>
+  </div>
+</section>
+  
   <section class="buscador">
     <input type="text" id="searchInput" placeholder="Buscar anime..." onkeyup="filtrarAnime()">
     <div class="filtros">
