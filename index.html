@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ViciAnime</title>
-  <meta name="description" content="Catálogo de anime online con buscador, filtros y fichas visuales. Inspirado en AnimeFLV, TioAnime y Katanime.">
-  <meta name="keywords" content="anime, ver anime, catálogo anime, naruto, one piece, dragon ball, animeflv, tioanime, katanime">
-  <meta name="author" content="Vicente">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Catálogo de anime online con buscador, filtros y fichas visuales. Inspirado en AnimeFLV, TioAnime y Katanime." />
+  <meta name="keywords" content="anime, ver anime, catálogo anime, naruto, one piece, dragon ball, animeflv, tioanime, katanime" />
+  <meta name="author" content="Vicente" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
     <div class="logo">
-  <img src="assets/imagenes/Anime-removebg-preview.png" alt="ViciAnime Logo" />
-</div>
+      <img src="assets/imagenes/Anime-removebg-preview.png" alt="ViciAnime Logo" />
+    </div>
     <nav>
       <ul>
         <li><a href="#">Inicio</a></li>
@@ -23,68 +23,68 @@
         <li><a href="#">Perfil</a></li>
       </ul>
     </nav>
-<div class="search-box">
-  <input type="text" id="anime-search" placeholder="Buscar anime..." />
-  <ul id="search-results"></ul>
-</div>
+    <div class="search-box">
+      <input type="text" id="anime-search" placeholder="Buscar anime..." />
+      <ul id="search-results"></ul>
+    </div>
   </header>
+
   <section class="hero-slider">
-  <div class="slide active" style="background-image: url('assets/imagenes/gachiakuta.jpg');">
-    <div class="overlay">
-      <h1>Gachiakuta</h1>
-      <p>Rudo y su padre adoptivo, Regto, viven en los barrios bajos de una ciudad rica e intentan convivir con el resto de los habitantes, pero Rudo desprecia el derroche de la clase alta...</p>
-      <div class="tags">
-        <span>Acción</span>
-        <span>Fantasía</span>
-        <span>Shōnen</span>
+    <div class="slide active" style="background-image: url('assets/imagenes/gachiakuta.jpg');">
+      <div class="overlay">
+        <h1>Gachiakuta</h1>
+        <p>Rudo y su padre adoptivo, Regto, viven en los barrios bajos de una ciudad rica e intentan convivir con el resto de los habitantes, pero Rudo desprecia el derroche de la clase alta...</p>
+        <div class="tags">
+          <span>Acción</span>
+          <span>Fantasía</span>
+          <span>Shōnen</span>
+        </div>
+        <a href="#" class="ver-btn">Ver ahora</a>
       </div>
-      <a href="#" class="ver-btn">Ver ahora</a>
     </div>
-  </div>
 
-  <div class="slide" style="background-image: url('assets/imagenes/jujutsukaisen.jpg');">
-    <div class="overlay">
-      <h1>Jujutsu Kaisen</h1>
-      <p>Yuji Itadori se une a una organización secreta para eliminar maldiciones tras ingerir un objeto maldito...</p>
-      <div class="tags">
-        <span>Acción</span>
-        <span>Sobrenatural</span>
-        <span>Shōnen</span>
+    <div class="slide" style="background-image: url('assets/imagenes/jujutsukaisen.jpg');">
+      <div class="overlay">
+        <h1>Jujutsu Kaisen</h1>
+        <p>Yuji Itadori se une a una organización secreta para eliminar maldiciones tras ingerir un objeto maldito...</p>
+        <div class="tags">
+          <span>Acción</span>
+          <span>Sobrenatural</span>
+          <span>Shōnen</span>
+        </div>
+        <a href="#" class="ver-btn">Ver ahora</a>
       </div>
-      <a href="#" class="ver-btn">Ver ahora</a>
     </div>
-  </div>
 
-  <div class="slide" style="background-image: url('assets/imagenes/onepiece.webp');">
-    <div class="overlay">
-      <h1>One Piece</h1>
-      <p>Monkey D. Luffy zarpa en busca del tesoro legendario para convertirse en el Rey de los Piratas...</p>
-      <div class="tags">
-        <span>Aventura</span>
-        <span>Acción</span>
-        <span>Shōnen</span>
+    <div class="slide" style="background-image: url('assets/imagenes/onepiece.webp');">
+      <div class="overlay">
+        <h1>One Piece</h1>
+        <p>Monkey D. Luffy zarpa en busca del tesoro legendario para convertirse en el Rey de los Piratas...</p>
+        <div class="tags">
+          <span>Aventura</span>
+          <span>Acción</span>
+          <span>Shōnen</span>
+        </div>
+        <a href="#" class="ver-btn">Ver ahora</a>
       </div>
-      <a href="#" class="ver-btn">Ver ahora</a>
     </div>
-  </div>
- <div class="slider-dots" id="sliderDots"></div>
-</section>
+
+    <div class="slider-dots" id="sliderDots"></div>
+  </section>
 
   <section class="catalogo" id="catalogo">
     <div class="anime-card" data-status="completed">
-      <img src="assets/imagenes/jujutsukaisen.jpg" alt="Jujutsu Kaisen">
+      <img src="assets/imagenes/jujutsukaisen.jpg" alt="Jujutsu Kaisen" />
       <h3>Jujutsu Kaisen</h3>
       <span class="estado">Completado</span>
     </div>
     <div class="anime-card" data-status="ongoing">
-      <img src="assets/imagenes/onepiece.webp" alt="One Piece">
+      <img src="assets/imagenes/onepiece.webp" alt="One Piece" />
       <h3>One Piece</h3>
       <span class="estado">En emisión</span>
     </div>
-    <!-- Añade más tarjetas aquí -->
   </section>
 
   <script src="script.js"></script>
 </body>
 </html>
-
