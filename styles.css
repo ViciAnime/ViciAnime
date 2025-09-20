@@ -1,1 +1,138 @@
+body {
+  margin: 0;
+  background-color: #0f0f1a;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a2e;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  color: #6240ED;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #6240ED;
+  font-weight: bold;
+}
+
+.destacado {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  gap: 2rem;
+  background-color: #16213e;
+}
+
+.destacado img {
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.info h1 {
+  font-family: 'Orbitron', sans-serif;
+  color: #85E330;
+}
+
+.tags span {
+  background-color: #6240ED;
+  padding: 0.3rem 0.6rem;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.ver-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #85E330;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.buscador {
+  text-align: center;
+  padding: 2rem;
+}
+
+.buscador input {
+  width: 300px;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+}
+
+.filtros button {
+  background-color: #16213e;
+  color: white;
+  border: 1px solid #6240ED;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filtros .activo {
+  background-color: #6240ED;
+}
+
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.anime-card {
+  background-color: #1a1a2e;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 0 10px #000;
+  transition: transform 0.3s ease;
+}
+
+.anime-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #6240ED;
+}
+
+.anime-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.anime-card h3 {
+  padding: 0.5rem;
+}
+
+.estado {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #85E330;
+}
 
