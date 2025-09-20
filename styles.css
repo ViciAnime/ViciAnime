@@ -18,12 +18,11 @@ header {
   align-items: center;
   padding: 1rem 2rem;
   background: transparent;
-  pointer-events: none; /* evita que bloquee clics si lo deseas */
 }
 
 .logo {
   font-family: 'Orbitron', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #ffffff;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
   pointer-events: auto;
