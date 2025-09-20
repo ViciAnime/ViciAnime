@@ -1,3 +1,4 @@
+/* === RESET GLOBAL === */
 * {
   margin: 0;
   padding: 0;
@@ -6,14 +7,13 @@
 
 body {
   overflow-x: hidden;
-  padding: 0;
-  margin: 0;
   background-color: #0f0f1a;
   color: #fff;
   font-family: 'Roboto', sans-serif;
   width: 100%;
 }
 
+/* === HEADER === */
 header {
   position: fixed;
   top: 0;
@@ -25,21 +25,18 @@ header {
   padding: 1rem 2rem;
   background-color: transparent;
   box-shadow: none;
-  
 }
 
 .logo img {
-  height: 70px !important;
-  width: auto !important;
-  margin-right: 2rem; /* espacio entre logo y menú */
+  height: 70px;
+  width: auto;
+  margin-right: 2rem;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   gap: 1.5rem;
-  margin: 0;
-  padding: 0;
 }
 
 nav a {
@@ -48,127 +45,61 @@ nav a {
   font-weight: bold;
 }
 
-.destacado {
+/* === BUSCADOR === */
+.search-box {
+  position: relative;
+  margin-left: auto;
   display: flex;
-  flex-wrap: wrap;
-  padding: 2rem;
-  gap: 2rem;
-  background-color: #16213e;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-.destacado img {
-  max-width: 400px;
-  border-radius: 10px;
-}
-
-.info h1 {
-  font-family: 'Orbitron', sans-serif;
-  color: #85E330;
-}
-
-.tags span {
-  background-color: #6240ED;
-  padding: 0.3rem 0.6rem;
-  margin-right: 0.5rem;
-  border-radius: 5px;
-  font-size: 0.9rem;
-}
-
-.ver-btn {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: #85E330;
-  color: #000;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.buscador {
-  text-align: center;
-  padding: 2rem;
-}
-
-.buscador input {
-  width: 300px;
-  padding: 0.6rem;
-  border-radius: 8px;
+.search-box input {
+  padding: 0.4rem 0.8rem;
+  background-color: #000;
+  color: #fff;
   border: none;
-  font-size: 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.filtros button {
-  background-color: #16213e;
-  color: white;
-  border: 1px solid #6240ED;
-  padding: 0.5rem 1rem;
-  margin: 0 0.5rem;
-  border-radius: 5px;
+.search-box input:focus {
+  background-color: #fff;
+  color: #000;
+  outline: none;
+}
+
+#search-results {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  color: #000;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem;
+  width: 200px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: none;
+}
+
+#search-results li {
+  padding: 0.3rem 0.5rem;
   cursor: pointer;
 }
 
-.filtros .activo {
-  background-color: #6240ED;
+#search-results li:hover {
+  background-color: #eee;
 }
 
-.catalogo {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
-}
-
-.anime-card {
-  background-color: #1a1a2e;
-  border-radius: 10px;
-  overflow: hidden;
-  text-align: center;
-  box-shadow: 0 0 10px #000;
-  transition: transform 0.3s ease;
-}
-
-.anime-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px #6240ED;
-}
-
-.anime-card img {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-}
-
-.anime-card h3 {
-  padding: 0.5rem;
-}
-
-.estado {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
-  color: #85E330;
-}
-.scroll-text {
-  max-height: 150px; /* Puedes ajustar la altura */
-  overflow-y: auto;
-  padding: 1rem;
-  background-color: #16213e;
-  border-radius: 8px;
-  box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
-  margin-top: 1rem;
-}
-.scroll-text p {
-  margin: 0;
-  line-height: 1.6;
-}
-
+/* === HERO SLIDER === */
 .hero-slider {
   position: relative;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  margin: 0 auto;
 }
 
 .slide {
@@ -238,6 +169,7 @@ nav a {
   font-weight: bold;
 }
 
+/* === SLIDER DOTS === */
 .slider-dots {
   position: absolute;
   bottom: 30px;
@@ -261,50 +193,58 @@ nav a {
   background-color: #85E330;
 }
 
-.search-box {
-  position: relative;
-  margin-left: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+/* === CATALOGO === */
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  margin-top: 100vh; /* para que no se solape con el carrusel */
 }
 
-.search-box input {
-  padding: 0.4rem 0.8rem;
-  background-color: #000;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
+.anime-card {
+  background-color: #1a1a2e;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 0 10px #000;
+  transition: transform 0.3s ease;
 }
 
-.search-box input:focus {
-  background-color: #fff;
-  color: #000;
-  outline: none;
+.anime-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #6240ED;
 }
 
-#search-results {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: #fff;
-  color: #000;
-  list-style: none;
-  margin: 0;
+.anime-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.anime-card h3 {
   padding: 0.5rem;
-  width: 200px;
-  border-radius: 4px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  display: none;
 }
 
-#search-results li {
-  padding: 0.3rem 0.5rem;
-  cursor: pointer;
+.estado {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #85E330;
 }
 
-#search-results li:hover {
-  background-color: #eee;
+/* === SCROLL TEXT (si usas esta clase en algún sitio) === */
+.scroll-text {
+  max-height: 150px;
+  overflow-y: auto;
+  padding: 1rem;
+  background-color: #16213e;
+  border-radius: 8px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
+  margin-top: 1rem;
+}
+
+.scroll-text p {
+  margin: 0;
+  line-height: 1.6;
 }
