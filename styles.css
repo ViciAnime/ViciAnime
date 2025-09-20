@@ -199,7 +199,7 @@ nav a {
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 2rem;
   padding: 2rem;
-  margin-top: 100vh; /* para que no se solape con el carrusel */
+  margin-top: 4rem; /* para que no se solape con el carrusel */
 }
 
 .anime-card {
