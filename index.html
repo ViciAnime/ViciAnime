@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ViciAnime</title>
+  <meta name="description" content="Catálogo de anime online con buscador, filtros y fichas visuales. Inspirado en AnimeFLV, TioAnime y Katanime.">
+  <meta name="keywords" content="anime, ver anime, catálogo anime, naruto, one piece, dragon ball, animeflv, tioanime, katanime">
+  <meta name="author" content="Vicente">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">ViciAnime</div>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Catálogo</a></li>
+        <li><a href="#">Calendario</a></li>
+        <li><a href="#">Perfil</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="destacado">
+    <img src="assets/images/gachiakuta.jpg" alt="Gachiakuta">
+    <div class="info">
+      <h1>Gachiakuta</h1>
+      <p>Rudo vive en los barrios bajos y lucha contra la injusticia de una ciudad dividida por clases...</p>
+      <div class="tags"><span>Acción</span><span>Fantasía</span><span>Shōnen</span></div>
+      <a href="#" class="ver-btn">Ver ahora</a>
+    </div>
+  </section>
+
+  <section class="buscador">
+    <input type="text" id="searchInput" placeholder="Buscar anime..." onkeyup="filtrarAnime()">
+    <div class="filtros">
+      <button onclick="filtrarEstado('all')" class="activo">Todos</button>
+      <button onclick="filtrarEstado('completed')">Completados</button>
+      <button onclick="filtrarEstado('ongoing')">En emisión</button>
+    </div>
+  </section>
+
+  <section class="catalogo" id="catalogo">
+    <div class="anime-card" data-status="completed">
+      <img src="assets/images/jujutsu.jpg" alt="Jujutsu Kaisen">
+      <h3>Jujutsu Kaisen</h3>
+      <span class="estado">Completado</span>
+    </div>
+    <div class="anime-card" data-status="ongoing">
+      <img src="assets/images/onepiece.jpg" alt="One Piece">
+      <h3>One Piece</h3>
+      <span class="estado">En emisión</span>
+    </div>
+    <!-- Añade más tarjetas aquí -->
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
