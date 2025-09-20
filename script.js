@@ -1,4 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // === HEADER SCROLL BEHAVIOR ===
+  let lastScrollTop = 0;
+  const header = document.querySelector('header');
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop && scrollTop > 100) {
+      // Scroll hacia abajo
+      header.classList.add('hide-header');
+    } else {
+      // Scroll hacia arriba o al principio
+      header.classList.remove('hide-header');
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  });
   // Carrusel
   let currentSlide = 0;
   const slides = document.querySelectorAll('.slide');
