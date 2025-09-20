@@ -83,4 +83,20 @@ showSlide(currentSlide);
     setTimeout(() => resultsBox.style.display = 'none', 200);
   });
 </script>
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.dot');
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      // Quitar clase 'active' de todos los slides y dots
+      slides.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(d => d.classList.remove('active'));
+
+      // Activar el slide y el dot correspondiente
+      slides[index].classList.add('active');
+      dot.classList.add('active');
+    });
+  });
+</script>
 
