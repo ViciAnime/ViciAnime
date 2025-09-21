@@ -542,3 +542,112 @@ body.pagina-anime {
   flex-direction: column;
   gap: 1rem;
 }
+
+.pcontent {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  color: white;
+}
+
+#animeinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.portada-anime {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.detail-anime {
+  padding: 1rem;
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 10px;
+}
+
+.comics-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.comics-alt {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.details-by {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.tag-2 {
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+}
+
+.tag-2.verde {
+  background-color: #4CAF50;
+}
+
+.tag-2.rojo {
+  background-color: #E53935;
+}
+
+.comics-caps {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+#sinopsis p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.anime-genres a {
+  display: inline-block;
+  margin-right: 0.5rem;
+  padding: 0.2rem 0.6rem;
+  background-color: #333;
+  border-radius: 5px;
+  color: #85E330;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.estado {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #85E330;
+}
+
+.mark_as {
+  margin-top: 1rem;
+}
+
+.mark {
+  cursor: pointer;
+  background-color: #222;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: white;
+}
+
+.mark-menu {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.mark-menu li {
+  padding: 0.5rem;
+  background-color: #111;
+  border-bottom: 1px solid #333;
+  cursor: pointer;
+}
