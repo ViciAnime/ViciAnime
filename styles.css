@@ -625,7 +625,21 @@ body.pagina-anime {
   font-size: 1rem;
   margin-bottom: 0.5rem;
 }
+.sinopsis {
+  max-height: 150px; /* ajusta según lo que quieras mostrar */
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
 
+/* Opcional: estilo para scrollbar */
+.sinopsis::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sinopsis::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
 .anime-genres a {
   display: inline-block;
   margin-right: 0.5rem;
