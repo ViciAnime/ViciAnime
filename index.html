@@ -89,11 +89,34 @@
     <div class="chapter-info">
       <h3 class="chapter-anime">Ame to Kimi to</h3>
       <span class="chapter-type">Anime</span>
-      <span class="chapter-time">Hace 17 horas</span>
+      <span class="chapter-time" data-fecha="2025-09-20T21:00:00">Hace X</span>
     </div>
   </a>
 </section>
 
   <script src="script.js"></script>
+  <script>
+  function tiempoDesde(fecha) {
+    const ahora = new Date();
+    const publicada = new Date(fecha);
+    const diffMs = ahora - publicada;
+    const diffMin = Math.floor(diffMs / 60000);
+    const diffHoras = Math.floor(diffMin / 60);
+    const diffDias = Math.floor(diffHoras / 24);
+
+    if (diffMin < 1) return "Hace segundos";
+    if (diffMin < 60) return `Hace ${diffMin} min`;
+    if (diffHoras < 24) return `Hace ${diffHoras} horas`;
+    return `Hace ${diffDias} días`;
+  }
+
+  document.querySelectorAll(".chapter-time").forEach(el => {
+    const fecha = el.getAttribute("data-fecha");
+    if (fecha) {
+      el.textContent = tiempoDesde(fecha);
+    }
+  });
+</script>
+
 </body>
 </html>
