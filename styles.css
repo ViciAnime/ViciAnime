@@ -635,3 +635,73 @@ body.pagina-anime {
   font-weight: bold;
   color: #85E330;
 }
+.portada-superpuesta {
+  position: relative;
+  width: 60%;
+  margin: 2rem auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.portada-superpuesta img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(0.4);
+}
+
+.contenido-superpuesto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.comics-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+}
+
+.comics-alt {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.details-by,
+.comics-caps,
+.sinopsis p,
+.estado {
+  font-size: 1rem;
+}
+
+.tag-2 {
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+}
+
+.tag-2.verde {
+  background-color: #4CAF50;
+}
+
+.anime-genres a {
+  display: inline-block;
+  margin-right: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  background-color: #333;
+  border-radius: 5px;
+  color: #85E330;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
