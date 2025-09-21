@@ -382,3 +382,78 @@ a:hover {
   opacity: 0.8;
 }
 
+
+
+
+
+
+
+
+
+/* Imagen grande con título encima */
+.anime-portada {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 1rem;
+}
+
+.anime-portada img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.titulo-en-imagen {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 2rem;
+  background-color: rgba(0,0,0,0.6);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+/* Estado y temporada */
+.anime-info {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.estado {
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+}
+
+.estado.verde {
+  background-color: #4CAF50;
+}
+
+.estado.rojo {
+  background-color: #E53935;
+}
+
+.temporada {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Capítulos, descripción, géneros, tipo */
+.capitulos-info,
+.descripcion,
+.generos,
+.tipo {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: white;
+}
+
+/* Episodios */
+.episodios h2 {
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem;
+  color: #85E330;
+}
