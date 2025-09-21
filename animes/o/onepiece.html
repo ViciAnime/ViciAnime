@@ -7,35 +7,81 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Header común -->
+  <!-- ✅ HEADER -->
   <header>
-    <!-- tu menú de navegación -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="perfil.html">Perfil</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Contenido del anime -->
+  <!-- ✅ CONTENIDO PRINCIPAL -->
   <main>
     <section class="anime-detalle">
-      <h1>One Piece</h1>
-      <p>Tipo: Anime</p>
-      <p>Sinopsis: Monkey D. Luffy se embarca en una aventura para convertirse en el Rey de los Piratas.</p>
-      <div class="capitulos">
-       <a href="#" class="chapter-card">
-  <div class="chapter-image">
-    <img src="assets/imagenes/onepiece_cap1078.jpg" alt="One Piece - Capítulo 1078" />
-    <span class="chapter-number">Capítulo 1078</span>
-  </div>
-  <div class="chapter-info">
-    <h3 class="chapter-anime">One Piece</h3>
-    <span class="chapter-type">Anime</span>
-    <span class="chapter-time" data-fecha="2025-09-20T18:29:56">Hace X</span>
-  </div>
-</a>
-
+      <!-- 📸 Imagen + Título -->
+      <div class="anime-portada">
+        <img src="assets/imagenes/onepiece_banner.jpg" alt="One Piece" />
+        <h1 class="titulo-en-imagen">One Piece</h1>
       </div>
+
+      <!-- 🟩 Estado + Estación + Año -->
+      <div class="anime-info">
+        <span class="estado verde">En emisión</span>
+        <span class="temporada">Verano 1999</span>
+      </div>
+
+      <!-- 📊 Capítulos disponibles -->
+      <div class="capitulos-info">
+        <p>Capítulos disponibles: <strong>1078 / ???</strong></p>
+      </div>
+
+      <!-- 📝 Descripción -->
+      <div class="descripcion">
+        <p>
+          *One Piece* es una serie de anime basada en el manga de Eiichiro Oda. La historia sigue a Monkey D. Luffy, un joven que obtiene poderes de goma tras comer una fruta del diablo. Junto a su tripulación, los Sombrero de Paja, se embarca en una aventura épica por los mares para encontrar el tesoro legendario conocido como “One Piece” y convertirse en el Rey de los Piratas.
+        </p>
+      </div>
+
+      <!-- 🏷️ Géneros -->
+      <div class="generos">
+        <p><strong>Géneros:</strong> Acción, Aventura, Fantasía, Comedia</p>
+      </div>
+
+      <!-- 🎞️ Tipo -->
+      <div class="tipo">
+        <p><strong>Tipo:</strong> Anime</p>
+      </div>
+    </section>
+
+    <!-- 📺 Episodios -->
+    <section class="episodios">
+      <h2>Episodios</h2>
+
+      <!-- Ejemplo de episodio -->
+      <a href="#" class="chapter-card">
+        <div class="chapter-image">
+          <img src="assets/imagenes/onepiece_cap1078.jpg" alt="One Piece - Capítulo 1078" />
+          <span class="chapter-number">Capítulo 1078</span>
+        </div>
+        <div class="chapter-info">
+          <h3 class="chapter-anime">One Piece</h3>
+          <span class="chapter-type">Anime</span>
+          <span class="chapter-time" data-fecha="2025-09-20T20:00:00">Hace X</span>
+        </div>
+      </a>
+
+      <!-- Puedes añadir más capítulos aquí -->
     </section>
   </main>
 
-  <script src="script.js"></script>
+  <!-- ⏱️ Script para tiempo real -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
+  <script>
+    timeago.render(document.querySelectorAll('.chapter-time'));
+  </script>
 </body>
 </html>
 
