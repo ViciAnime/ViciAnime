@@ -311,11 +311,14 @@ nav a {
 }
 
 .chapter-card {
-  text-decoration: none;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
   border-radius: 10px;
   overflow: hidden;
-  position: relative;
+  text-decoration: none;
+  background-color: #111;
   transition: transform 0.3s ease;
 }
 
@@ -335,22 +338,23 @@ nav a {
   display: block;
 }
 
-.chapter-overlay {
+.chapter-number {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  width: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  bottom: 8px;
+  left: 12px;
+  background-color: rgba(0, 0, 0, 0.6);
   color: white;
+  font-size: 0.9rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.chapter-info {
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
-}
-
-.chapter-title {
-  font-size: 1rem;
-  font-weight: bold;
+  color: white;
 }
 
 .chapter-anime {
@@ -360,11 +364,12 @@ nav a {
 
 .chapter-type {
   color: #A259FF; /* morado */
-  font-size: 0.9rem;
   font-weight: bold;
+  font-size: 0.9rem;
 }
 
 .chapter-time {
   font-size: 0.8rem;
   opacity: 0.8;
 }
+
