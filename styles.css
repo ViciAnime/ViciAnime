@@ -638,7 +638,7 @@ body.pagina-anime {
 .portada-superpuesta {
   position: relative;
   width: 60%;
-  margin: 2rem auto;
+  margin: 2rem 0 2rem 3rem;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -647,7 +647,7 @@ body.pagina-anime {
   width: 100%;
   height: auto;
   display: block;
-  filter: brightness(0.4);
+  filter: brightness(0.8);
 }
 
 .contenido-superpuesto {
