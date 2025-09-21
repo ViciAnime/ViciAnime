@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jujutsu Kaisen | ViciAnime</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <!-- Aquí puedes poner tu menú de navegación si lo tienes -->
+  </header>
+
+  <main>
+    <section class="anime-detalle">
+      <h1>Jujutsu Kaisen</h1>
+      <p>Tipo: Anime</p>
+      <p>Sinopsis: Yuji Itadori se une a una organización secreta de hechiceros para eliminar maldiciones y proteger a la humanidad.</p>
+
+      <div class="capitulos">
+        <!-- Capítulo 47 -->
+        <a href="#" class="chapter-card">
+          <div class="chapter-image">
+            <img src="assets/imagenes/jujutsukaisen_cap47.jpg" alt="Jujutsu Kaisen - Capítulo 47" />
+            <span class="chapter-number">Capítulo 47</span>
+          </div>
+          <div class="chapter-info">
+            <h3 class="chapter-anime">Jujutsu Kaisen</h3>
+            <span class="chapter-type">Anime</span>
+            <span class="chapter-time" data-fecha="2025-09-20T20:00:00">Hace X</span>
+          </div>
+        </a>
+
+        <!-- Capítulo 48 -->
+        <a href="#" class="chapter-card">
+          <div class="chapter-image">
+            <img src="assets/imagenes/jujutsukaisen_cap48.jpg" alt="Jujutsu Kaisen - Capítulo 48" />
+            <span class="chapter-number">Capítulo 48</span>
+          </div>
+          <div class="chapter-info">
+            <h3 class="chapter-anime">Jujutsu Kaisen</h3>
+            <span class="chapter-type">Anime</span>
+            <span class="chapter-time" data-fecha="2025-09-21T10:00:00">Hace X</span>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Script para mostrar tiempo en tiempo real -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
+  <script>
+    timeago.render(document.querySelectorAll('.chapter-time'));
+  </script>
+</body>
+</html>
 
