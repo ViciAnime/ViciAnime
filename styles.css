@@ -267,3 +267,45 @@ nav a {
   margin: 0;
   line-height: 1.6;
 }
+
+.anime-card-link {
+  text-decoration: none;
+}
+
+.anime-card.full-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.anime-card.full-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.anime-card.full-image .card-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.anime-card.full-image h3 {
+  color: white;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.anime-card.full-image .estado {
+  color: #A259FF; /* morado */
+  font-weight: bold;
+  font-size: 0.9rem;
+  align-self: flex-start;
+}
