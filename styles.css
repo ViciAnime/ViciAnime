@@ -783,45 +783,62 @@ body.pagina-anime {
   text-decoration: none;
   font-size: 0.9rem;
 }
+/* Igual margen que la imagen superior */
 .episodios-section {
-  margin-top: 2rem;
-  padding-left: 2rem;
+  margin: 5rem 0 2rem 3rem;
+  width: 60%;
 }
 
+/* Título verde como en index */
 .episodios-titulo {
-  color: #00c853; /* verde como en index */
+  color: #00c853;
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
 
+/* Grid compacto */
 .episodios-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1rem;
 }
 
+/* Tarjeta con imagen de fondo */
 .episodio-card {
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 1rem;
+  position: relative;
+  height: 120px;
   border-radius: 8px;
-  color: #ffffff;
-  transition: background-color 0.3s ease;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  transition: transform 0.3s ease;
 }
 
 .episodio-card:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.02);
 }
 
+/* Capa oscura para que el texto se lea */
+.episodio-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.5rem;
+  width: 100%;
+  color: #fff;
+}
+
+/* Texto dentro de cada episodio */
 .episodio-numero {
   font-weight: bold;
   color: #00c853;
-  display: block;
-  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
 }
 
 .episodio-titulo {
-  font-size: 0.95rem;
-  line-height: 1.4;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  margin-top: 0.2rem;
 }
+
