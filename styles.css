@@ -671,11 +671,52 @@ body.pagina-anime {
   overflow: hidden;
 }
 
-.portada-superpuesta img {
+/* Imagen con gradiente separado */
+.imagen-con-gradiente {
+  position: relative;
+}
+
+.imagen-con-gradiente img {
   width: 100%;
   height: auto;
   display: block;
-  filter: brightness(0.9);
+  filter: brightness(1); /* imagen normal */
+}
+
+/* Gradiente oscuro en la izquierda, brillante en la derecha */
+.gradiente-izquierda {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(255,255,255,0));
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Texto encima de todo, sin afectar por el gradiente */
+.contenido-superpuesto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  z-index: 2;
+}
+
+/* Texto claro y brillante */
+.texto-claro {
+  color: #fff;
+  text-shadow:
+    0 0 5px rgba(255, 255, 255, 0.6),
+    0 0 10px rgba(255, 255, 255, 0.4);
+  font-weight: 600;
 }
 /* 🌓 Gradiente oscuro en la izquierda */
 .overlay-izquierda {
