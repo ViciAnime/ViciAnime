@@ -807,7 +807,7 @@ body.pagina-anime {
 /* Tarjeta con imagen de fondo */
 .episodio-card {
   position: relative;
-  height: 120px;
+  height: 80px;
   border-radius: 8px;
   background-size: cover;
   background-position: center;
