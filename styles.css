@@ -712,10 +712,9 @@ body.pagina-anime {
 
 /* Texto claro y brillante */
 .texto-claro {
-  color: #fff;
+  color: #ffffff;
   text-shadow:
-    0 0 5px rgba(255, 255, 255, 0.6),
-    0 0 10px rgba(255, 255, 255, 0.4);
+    text-shadow: 1px 1px 0 #000;
   font-weight: 600;
 }
 /* 🌓 Gradiente oscuro en la izquierda */
