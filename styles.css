@@ -70,7 +70,7 @@ a {
 }
 
 a:hover {
-  color: #85E330;         /* Color al pasar el ratón (puedes cambiarlo) */
+  color: inherit;         /* Color al pasar el ratón (puedes cambiarlo) */
 }
 
 /* === BUSCADOR === */
