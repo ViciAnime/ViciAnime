@@ -800,14 +800,14 @@ body.pagina-anime {
 /* Grid compacto */
 .episodios-grid {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
 }
 
 /* Tarjeta con imagen de fondo */
 .episodio-card {
   position: relative;
-  height: 120px;
+  height: 150px;
   border-radius: 8px;
   background-size: cover;
   background-position: center;
