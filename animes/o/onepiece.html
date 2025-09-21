@@ -29,59 +29,54 @@
     </div>
   </div>
 </header>
+<div class="pcontent">
+  <div id="animeinfo">
+    <!-- Imagen de portada -->
+    <img class="portada-anime" src="../../assets/imagenes/onepiece.webp" alt="One Piece" />
 
-  <main>
-  <section class="anime-detalle">
-    <!-- 📸 Imagen de fondo con todo el contenido encima -->
-    <div class="anime-portada-contenido">
-      <img src="../../assets/imagenes/onepiece.webp" alt="One Piece" />
+    <!-- Detalles del anime -->
+    <div class="detail-anime">
+      <h1 class="comics-title">One Piece</h1>
+      <h3 class="comics-alt">ワンピース</h3>
 
-      <div class="contenido-sobre-imagen">
-        <h1 class="titulo-anime">One Piece</h1>
+      <div class="details-by">
+        <span id="estado" class="tag-2 verde">En emisión</span>
+        <span class="mgr">•</span> Verano 1999
+      </div>
 
-        <div class="anime-info">
-          <span class="estado verde">En emisión</span>
-          <span class="temporada">Verano 1999</span>
-        </div>
+      <h3 class="comics-caps">1144 / ??? Capítulos</h3>
 
-        <div class="capitulos-info">
-          <p>Capítulos disponibles: <strong>1144 / ???</strong></p>
-        </div>
-
-        <div class="descripcion">
-          <p>
-            *One Piece* es una serie de anime basada en el manga de Eiichiro Oda. La historia sigue a Monkey D. Luffy, un joven que obtiene poderes de goma tras comer una fruta del diablo. Junto a su tripulación, los Sombrero de Paja, se embarca en una aventura épica por los mares para encontrar el tesoro legendario conocido como “One Piece” y convertirse en el Rey de los Piratas.
-          </p>
-        </div>
-
-        <div class="generos">
-          <p><strong>Géneros:</strong> Acción, Aventura, Fantasía, Comedia</p>
-        </div>
-
-        <div class="tipo">
-          <p><strong>Tipo:</strong> Anime</p>
+      <div id="sinopsis">
+        <p>
+          *One Piece* es una serie de anime basada en el manga de Eiichiro Oda. La historia sigue a Monkey D. Luffy, un joven que obtiene poderes de goma tras comer una fruta del diablo. Junto a su tripulación, los Sombrero de Paja, se embarca en una aventura épica por los mares para encontrar el tesoro legendario conocido como “One Piece” y convertirse en el Rey de los Piratas.
+        </p>
+        <div class="anime-genres">
+          <a href="#">Acción</a>
+          <a href="#">Aventura</a>
+          <a href="#">Fantasía</a>
+          <a href="#">Comedia</a>
         </div>
       </div>
+
+      <span id="ranking" class="estado">Anime</span>
+
+      <!-- Opciones de marcado -->
+      <div class="mark_as">
+        <div class="mark dropbtn dropdownbtn" data-drop="mark-menu">
+          <span data-default="Marcar como" class="val">Marcar como</span>
+          <span class="mdi mdi-menu-down"></span>
+        </div>
+        <ul class="mark-menu dropmenu ul-drop hidden">
+          <li data-val="1"><span class="mdi mdi-eye-check-outline"></span> Mirando</li>
+          <li data-val="2"><span class="mdi mdi-check-circle-outline"></span> Visto</li>
+          <li data-val="3"><span class="mdi mdi-timer-outline"></span> Pendiente</li>
+          <li data-val="4"><span class="mdi mdi-heart-outline"></span> Favorito</li>
+          <li data-val="0"><span class="mdi mdi-close"></span> Quitar</li>
+        </ul>
+      </div>
     </div>
-
-    <!-- 📺 Episodios -->
-    <section class="episodios">
-      <h2>Episodios</h2>
-
-      <a href="#" class="chapter-card">
-        <div class="chapter-image">
-          <img src="assets/imagenes/onepiece_cap1078.jpg" alt="One Piece - Capítulo 1078" />
-          <span class="chapter-number">Capítulo 1078</span>
-        </div>
-        <div class="chapter-info">
-          <h3 class="chapter-anime">One Piece</h3>
-          <span class="chapter-type">Anime</span>
-          <span class="chapter-time" data-fecha="2025-09-20T20:00:00">Hace X</span>
-        </div>
-      </a>
-    </section>
-  </section>
-</main>
+  </div>
+</div>
   <!-- ⏱️ Script para tiempo real -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
   <script>
