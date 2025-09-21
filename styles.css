@@ -549,49 +549,47 @@ body.pagina-anime {
   padding: 1rem;
   color: white;
 }
-
-/* Imagen centrada */
-#animeinfo {
-  max-width: 1000px;
+.pcontent {
+  max-width: 900px;
   margin: 2rem auto;
-  position: relative;
+  padding: 1rem;
+  color: white;
 }
 
-/* Imagen portada */
-#animeinfo img.portada-anime {
+#animeinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.portada-anime {
   width: 100%;
   border-radius: 10px;
   object-fit: cover;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-/* Bloque de información */
 .detail-anime {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 1.5rem;
   border-radius: 10px;
-  margin-top: -4rem;
-  position: relative;
-  z-index: 1;
 }
 
-/* Título */
 .comics-title {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: bold;
-  color: white;
   margin-bottom: 0.5rem;
 }
 
-/* Subtítulo */
 .comics-alt {
   font-size: 1.2rem;
   color: #ccc;
+  margin-bottom: 1rem;
 }
 
-/* Estado + temporada */
 .details-by {
   font-size: 1rem;
-  margin: 0.5rem 0;
+  margin-bottom: 0.5rem;
   color: #ddd;
 }
 
@@ -610,21 +608,16 @@ body.pagina-anime {
   background-color: #E53935;
 }
 
-/* Capítulos */
 .comics-caps {
   font-size: 1rem;
   margin-bottom: 1rem;
-  color: white;
 }
 
-/* Sinopsis */
 #sinopsis p {
   font-size: 1rem;
-  color: white;
   margin-bottom: 0.5rem;
 }
 
-/* Géneros */
 .anime-genres a {
   display: inline-block;
   margin-right: 0.5rem;
@@ -636,36 +629,9 @@ body.pagina-anime {
   font-size: 0.9rem;
 }
 
-/* Tipo */
 .estado {
   display: inline-block;
   margin-top: 1rem;
   font-weight: bold;
   color: #85E330;
-}
-
-/* Dropdown de marcado */
-.mark_as {
-  margin-top: 1rem;
-}
-
-.mark {
-  cursor: pointer;
-  background-color: #222;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  color: white;
-}
-
-.mark-menu {
-  list-style: none;
-  padding: 0;
-  margin-top: 0.5rem;
-}
-
-.mark-menu li {
-  padding: 0.5rem;
-  background-color: #111;
-  border-bottom: 1px solid #333;
-  cursor: pointer;
 }
