@@ -12,6 +12,12 @@ body {
   font-family: 'Roboto', sans-serif;
   width: 100%;
 }
+.text-brillante {
+  color: #fff;
+  text-shadow:
+    0 0 5px rgba(255, 255, 255, 0.6),
+    0 0 10px rgba(255, 255, 255, 0.4);
+}
 .borde-negro {
   color: white;
   text-shadow:
