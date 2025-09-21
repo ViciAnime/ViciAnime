@@ -626,7 +626,7 @@ body.pagina-anime {
   margin-bottom: 0.5rem;
 }
 .sinopsis {
-  max-width: 300px; /* ajusta según lo que necesites */
+  max-width: 250px; /* ajusta según lo que necesites */
   max-height: 150px;
   overflow-y: auto;
 }
