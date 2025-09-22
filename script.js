@@ -163,3 +163,31 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const selector = document.getElementById('rango-episodios');
+  const lista = document.getElementById('lista-episodios');
+
+  function mostrarEpisodios(inicio, fin) {
+    lista.innerHTML = '';
+    for (let i = inicio; i <= fin; i++) {
+      const episodio = document.createElement('div');
+      episodio.className = 'episodio';
+      episodio.textContent = `Episodio ${i}`;
+      lista.appendChild(episodio);
+    }
+  }
+
+  // Mostrar del 1 al 25 al cargar
+  mostrarEpisodios(1, 25);
+
+  // Actualizar al cambiar el selector
+  selector.addEventListener('change', () => {
+    const [inicio, fin] = selector.value.split('-').map(Number);
+    mostrarEpisodios(inicio, fin);
+  });
+});
+</script>
+
+
