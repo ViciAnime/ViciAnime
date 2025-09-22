@@ -847,18 +847,19 @@ body.pagina-anime {
 .layout-anime {
   display: flex;
   align-items: flex-start;
-  gap: 2rem;
-  padding: 0 3rem;
+  gap: 3rem;
+  padding: 0 4rem;
   margin-top: 6rem;
 }
 
 .similar-animes {
-  width: 220px;
+  width: 280px;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 1rem;
   border-radius: 8px;
   color: #fff;
   flex-shrink: 0;
+  margin-right: 2rem; /* margen derecho extra */
 }
 
 .anime-card {
@@ -877,20 +878,21 @@ body.pagina-anime {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 6px;
 }
 
 .anime-info {
-  padding: 0.5rem;
+  padding: 0.8rem;
 }
 
 .anime-title {
   display: block;
   font-weight: bold;
   color: #fff;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .anime-meta {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: #ccc;
 }
