@@ -860,6 +860,7 @@ body.pagina-anime {
   color: #fff;
   flex-shrink: 0;
   margin-right: 3rem; /* margen derecho extra */
+  overflow-y: auto; /* scroll interno si hay muchas tarjetas */
 }
 
 .similar-animes h3 {
