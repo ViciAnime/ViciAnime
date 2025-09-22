@@ -666,7 +666,6 @@ body.pagina-anime {
 .portada-superpuesta {
   position: relative;
   width: 60%;
-  margin: 5rem 0 2rem 3rem;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -735,11 +734,11 @@ body.pagina-anime {
   padding: 2rem;
   width: 100%;
   height: 100%;
-  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
+  z-index: 2;
 }
 
 .comics-title {
@@ -845,6 +844,14 @@ body.pagina-anime {
 
 
 
+.layout-anime {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 0 3rem;
+  margin-top: 6rem;
+}
+
 .similar-animes {
   width: 220px;
   background-color: rgba(0, 0, 0, 0.6);
@@ -852,12 +859,6 @@ body.pagina-anime {
   border-radius: 8px;
   color: #fff;
   flex-shrink: 0;
-}
-
-.similar-animes h3 {
-  font-size: 1.2rem;
-  color: #00c853;
-  margin-bottom: 1rem;
 }
 
 .anime-card {
