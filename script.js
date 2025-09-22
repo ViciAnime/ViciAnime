@@ -143,3 +143,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const selector = document.getElementById('rango-episodios');
+  const lista = document.getElementById('lista-episodios');
+
+  selector.addEventListener('change', () => {
+    const [inicio, fin] = selector.value.split('-').map(Number);
+    lista.innerHTML = ''; // limpiar lista anterior
+
+    for (let i = inicio; i <= fin; i++) {
+      const episodio = document.createElement('div');
+      episodio.className = 'episodio';
+      episodio.textContent = `Episodio ${i}`;
+      lista.appendChild(episodio);
+    }
+  });
+});
+</script>
+
