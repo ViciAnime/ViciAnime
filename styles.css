@@ -845,42 +845,51 @@ body.pagina-anime {
 
 
 
-.animes-similares {
-  position: absolute;
-  top: 5rem;
-  right: 3rem;
-  width: 200px;
+.similar-animes {
+  width: 220px;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 1rem;
   border-radius: 8px;
   color: #fff;
-  z-index: 3;
+  flex-shrink: 0;
 }
 
-.animes-similares h3 {
+.similar-animes h3 {
   font-size: 1.2rem;
   color: #00c853;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
 }
 
-.animes-similares ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.anime-card {
+  margin-bottom: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
-.animes-similares li {
-  margin-bottom: 0.5rem;
+.anime-card:hover {
+  transform: scale(1.02);
 }
 
-.animes-similares a {
-  color: #ffffff;
-  text-decoration: none;
+.anime-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.anime-info {
+  padding: 0.5rem;
+}
+
+.anime-title {
+  display: block;
+  font-weight: bold;
+  color: #fff;
   font-size: 0.95rem;
-  transition: color 0.3s ease;
 }
 
-.animes-similares a:hover {
-  color: #00c853;
+.anime-meta {
+  font-size: 0.8rem;
+  color: #ccc;
 }
-
