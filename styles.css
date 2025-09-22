@@ -903,3 +903,48 @@ body.pagina-anime {
   font-size: 0.85rem;
   color: #3DD7FF;
 }
+
+
+
+.episodios-selector {
+  margin: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.episodios-selector label {
+  font-weight: bold;
+  color: #00c853;
+}
+
+.episodios-selector select {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #222;
+  color: #b388ff;
+  font-size: 1rem;
+}
+
+.episodios-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.episodio {
+  background-color: #333;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.episodio:hover {
+  background-color: #00c853;
+}
