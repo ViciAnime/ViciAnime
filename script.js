@@ -98,3 +98,48 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => resultsBox.style.display = 'none', 200);
   });
 });
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const generoPrincipal = document.querySelector('.anime-genres a')?.textContent?.toLowerCase();
+
+  const similares = {
+    acción: [
+      { nombre: 'Naruto', enlace: 'naruto.html' },
+      { nombre: 'Bleach', enlace: 'bleach.html' },
+      { nombre: 'Attack on Titan', enlace: 'aot.html' }
+    ],
+    aventura: [
+      { nombre: 'Fairy Tail', enlace: 'fairytail.html' },
+      { nombre: 'Hunter x Hunter', enlace: 'hunterxhunter.html' },
+      { nombre: 'Made in Abyss', enlace: 'abyss.html' }
+    ],
+    fantasía: [
+      { nombre: 'Black Clover', enlace: 'blackclover.html' },
+      { nombre: 'Magi', enlace: 'magi.html' },
+      { nombre: 'Re:Zero', enlace: 'rezero.html' }
+    ],
+    comedia: [
+      { nombre: 'Gintama', enlace: 'gintama.html' },
+      { nombre: 'KonoSuba', enlace: 'konosuba.html' },
+      { nombre: 'Saiki K.', enlace: 'saikik.html' }
+    ]
+  };
+
+  const contenedor = document.querySelector('.animes-similares ul');
+  if (contenedor && similares[generoPrincipal]) {
+    contenedor.innerHTML = '';
+    similares[generoPrincipal].forEach(anime => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = anime.enlace;
+      a.textContent = anime.nombre;
+      li.appendChild(a);
+      contenedor.appendChild(li);
+    });
+  }
+});
