@@ -923,19 +923,26 @@ body.pagina-anime {
 }
 
 .episodios-bloque {
-  display: none;
-}
-
-.episodios-bloque.activo {
-  display: grid;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
   grid-template-columns: repeat(5, 1fr);
   gap: 1.5rem;
   margin: 3rem 3rem;
   padding: 0;
   box-sizing: border-box;
+  width: calc(100% - 6rem); /* para respetar márgenes izquierdo y derecho */
 }
 
-
+.episodios-bloque.activo {
+  position: relative;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  display: grid;
+}
 
 .episodio {
   position: relative;
