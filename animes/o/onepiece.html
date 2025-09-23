@@ -464,21 +464,6 @@
 </div>
 
 </div>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const selector = document.getElementById('rango-episodios');
-  const bloques = document.querySelectorAll('.episodios-bloque');
-
-  selector.addEventListener('change', () => {
-    bloques.forEach(b => b.style.display = 'none');
-    const seleccionado = document.getElementById(selector.value);
-    if (seleccionado) seleccionado.style.display = 'grid';
-  });
-
-  // Mostrar el primer bloque al cargar
-  document.getElementById('pag1').style.display = 'grid';
-});
-</script>
 
   <!-- ⏱️ Script para tiempo real -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
