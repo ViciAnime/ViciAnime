@@ -155,8 +155,9 @@ a:hover {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 1s ease-in-out;
   z-index: 1;
+  transform: translateY(20px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
 .slide.active {
@@ -164,6 +165,7 @@ a:hover {
   visibility: visible;
   pointer-events: auto;
   z-index: 2;
+  transform: translateY(0);
 }
 
 .overlay {
