@@ -144,3 +144,17 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+
+document.addEventListener('DOMContentLoaded', () => {
+  const selector = document.getElementById('rango-episodios');
+  const bloques = document.querySelectorAll('.episodios-bloque');
+
+  selector.addEventListener('change', () => {
+    bloques.forEach(b => b.classList.remove('activo'));
+    const seleccionado = document.getElementById(selector.value);
+    if (seleccionado) seleccionado.classList.add('activo');
+  });
+
+  // Mostrar el primer bloque al cargar
+  document.getElementById('pag1').classList.add('activo');
+});
