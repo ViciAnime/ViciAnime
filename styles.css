@@ -926,7 +926,7 @@ body.pagina-anime {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1.5rem;
-  max-width: 1200px; /* más ancho que antes */
+  max-width: 1200px;
   margin: 3rem auto;
   padding: 0 2rem;
 }
@@ -934,10 +934,8 @@ body.pagina-anime {
 
 .episodio {
   position: relative;
-  border: none;
-  border-radius: 0;
   overflow: hidden;
-  cursor: pointer;
+  border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -951,4 +949,18 @@ body.pagina-anime {
   height: 180px;
   object-fit: cover;
   display: block;
+}
+
+.episodio-texto {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #6240ED;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.5rem;
+  text-align: center;
+  z-index: 2;
 }
