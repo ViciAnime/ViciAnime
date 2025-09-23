@@ -921,7 +921,7 @@ body.pagina-anime {
   grid-template-columns: repeat(5, 1fr); /* 5 columnas iguales */
   gap: 1.2rem;
   margin: 2rem auto;
-  max-width: 1200px; /* ancho máximo del bloque */
+  max-width: 200px; /* ancho máximo del bloque */
   padding: 0 2rem; /* margen izquierdo y derecho */
 
 .episodio {
