@@ -11,6 +11,9 @@ body {
   color: #fff;
   font-family: 'Roboto', sans-serif;
   width: 100%;
+  margin: 0;
+  padding: 0 3rem; /* ← margen izquierdo y derecho */
+  box-sizing: border-box;
 }
 .text-brillante {
   color: #fff;
