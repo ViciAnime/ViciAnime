@@ -917,11 +917,12 @@ body.pagina-anime {
 }
 
 .episodios-bloque {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1rem;
-}
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columnas iguales */
+  gap: 1.2rem;
+  margin: 2rem auto;
+  max-width: 1200px; /* ancho máximo del bloque */
+  padding: 0 2rem; /* margen izquierdo y derecho */
 
 .episodio {
   background-color: #333;
