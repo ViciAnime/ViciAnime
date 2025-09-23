@@ -929,14 +929,15 @@ body.pagina-anime {
   margin: 3rem 3rem;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.3s ease;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
 }
 
 .episodios-bloque.activo {
-  position: relative;
   visibility: visible;
-  opacity: 1;
-  pointer-events: auto;
-  display: grid;
+  height: auto;
 }
 
 .episodio {
