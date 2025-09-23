@@ -163,18 +163,3 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const selector = document.getElementById('rango-episodios');
-  const bloques = document.querySelectorAll('.episodios-bloque');
-
-  selector.addEventListener('change', () => {
-    const valor = selector.value;
-
-    bloques.forEach(bloque => {
-      bloque.style.display = bloque.id === valor ? 'flex' : 'none';
-    });
-  });
-});
-</script>
