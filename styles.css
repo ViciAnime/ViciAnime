@@ -799,7 +799,7 @@ body.pagina-anime {
   color: #00c853;
   font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+ margin: 0 0 1rem 3rem;
 }
 
 /* Grid compacto */
@@ -913,7 +913,7 @@ body.pagina-anime {
 
 
 .caps_pagination {
-  margin: 1rem 0;
+  margin: 1rem 0 1rem 3rem;
   padding: 0.5rem;
   font-size: 1rem;
   border-radius: 6px;
