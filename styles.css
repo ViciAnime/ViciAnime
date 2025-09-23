@@ -942,7 +942,8 @@ body.pagina-anime {
 }
 
 .episodio:hover {
-  background-color: #00c853;
+  transform: scale(1.03);
+  box-shadow: 0 0 10px #6240ED;
 }
 
 .episodio img {
