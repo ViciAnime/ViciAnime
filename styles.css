@@ -939,3 +939,11 @@ body.pagina-anime {
 .episodio:hover {
   background-color: #00c853;
 }
+
+.episodio img {
+  width: 100%;
+  height: 120px; /* altura fija más pequeña */
+  object-fit: cover; /* recorta la imagen si es muy alta o ancha */
+  display: block;
+  border-bottom: 1px solid #444;
+}
