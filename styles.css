@@ -906,30 +906,17 @@ body.pagina-anime {
 
 
 
-.episodios-selector {
-  margin: 1.5rem 0;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  font-size: 1rem;
-  color: #fff;
-}
-
-.episodios-selector label {
-  font-weight: bold;
-  color: #00c853;
-}
-
-.episodios-selector select {
+.caps_pagination {
+  margin: 1rem 0;
   padding: 0.5rem;
+  font-size: 1rem;
   border-radius: 6px;
-  border: none;
   background-color: #222;
   color: #b388ff;
-  font-size: 1rem;
+  border: none;
 }
 
-.episodios-lista {
+.episodios-bloque {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
