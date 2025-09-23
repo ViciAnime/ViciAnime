@@ -49,14 +49,14 @@ document.addEventListener('DOMContentLoaded', () => {
   let slideInterval = setInterval(() => {
     currentSlide = (currentSlide + 1) % totalSlides;
     showSlide(currentSlide);
-  }, 12000);
+  }, 8000);
 
   function resetInterval() {
     clearInterval(slideInterval);
     slideInterval = setInterval(() => {
       currentSlide = (currentSlide + 1) % totalSlides;
       showSlide(currentSlide);
-    }, 12000);
+    }, 8000);
   }
 
   showSlide(currentSlide);
