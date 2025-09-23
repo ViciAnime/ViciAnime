@@ -150,23 +150,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const bloques = document.querySelectorAll('.episodios-bloque');
 
   selector.addEventListener('change', () => {
-    bloques.forEach(b => {
-      b.style.display = 'none';
-    });
-
+    bloques.forEach(b => b.classList.remove('activo'));
     const seleccionado = document.getElementById(selector.value);
-    if (seleccionado) {
-      // Forzar reflujo del navegador
-      seleccionado.style.display = 'grid';
-      seleccionado.offsetHeight; // ← esto fuerza el reflujo
-      seleccionado.style.display = 'grid'; // reaplica el estilo
-    }
+    if (seleccionado) seleccionado.classList.add('activo');
   });
 
   // Mostrar el primer bloque al cargar
-  const inicial = document.getElementById('pag1');
-  inicial.style.display = 'grid';
-  inicial.offsetHeight;
-  inicial.style.display = 'grid';
+  document.getElementById('pag1').classList.add('activo');
 });
-
