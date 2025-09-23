@@ -922,7 +922,8 @@ body.pagina-anime {
   gap: 1rem;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding-left: 250px; /* igual al ancho de la imagen */
+  padding-right: 300px; /* igual al ancho de los animes similares */
   box-sizing: border-box;
 }
 
