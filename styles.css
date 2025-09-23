@@ -918,12 +918,11 @@ body.pagina-anime {
 
 .episodios-bloque {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr); /* 5 columnas iguales */
   gap: 1rem;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding-left: 250px; /* igual al ancho de la imagen */
-  padding-right: 300px; /* igual al ancho de los animes similares */
+  max-width: 1000px; /* ancho total del bloque */
+  margin: 2rem auto; /* centrado horizontal */
+  padding: 0 1rem; /* margen lateral interno */
   box-sizing: border-box;
 }
 
