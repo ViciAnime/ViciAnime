@@ -324,14 +324,10 @@ body.pagina-anime {
 }
 
 .episodios-bloque {
-  display: none;
+  display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1.5rem;
   margin: 2rem 0;
-}
-
-.episodios-bloque.activo {
-  display: grid;
 }
 
 .episodio {
