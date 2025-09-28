@@ -2,52 +2,76 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Catálogo | ViciAnime</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- HEADER (igual que en index.html) -->
   <header>
-  <div class="header-content">
-    <div class="logo">
-  <a href="index.html">
-    <img src="assets/imagenes/Anime-removebg-preview.png" alt="ViciAnime Logo" />
-  </a>
-</div>
-  <nav>
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="catalogo.html">Catálogo</a></li>
-      <li><a href="calendario.html">Calendario</a></li>
-      <li><a href="perfil.html">Perfil</a></li>
-    </ul>
-  </nav>
-  <div class="search-box">
-    <input type="text" id="anime-search" placeholder="Buscar anime..." />
-    <ul id="search-results"></ul>
-  </div>
-</header>
+    <div class="header-content">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/imagenes/Anime-removebg-preview.png" alt="ViciAnime Logo" />
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="calendario.html">Calendario</a></li>
+          <li><a href="perfil.html">Perfil</a></li>
+        </ul>
+      </nav>
+      <div class="search-box">
+        <input type="text" id="anime-search" placeholder="Buscar anime..." />
+        <ul id="search-results"></ul>
+      </div>
+    </div>
+  </header>
 
+  <!-- CONTENEDOR PRINCIPAL -->
+  <main class="main-content">
+    <h1 class="titulo-catalogo">Catálogo Completo</h1>
+    <section class="catalogo" id="catalogo">
+      <!-- Tarjetas se generan aquí -->
+      <a href="animes/j/jujutsukaisen.html" class="anime-card-link">
+        <div class="anime-card">
+          <img src="assets/imagenes/jujutsukaisen.jpg" alt="Jujutsu Kaisen" />
+          <h3>Jujutsu Kaisen</h3>
+          <span class="estado verde">En emisión</span>
+        </div>
+      </a>
 
-  <section class="catalogo" id="catalogo">
-    <a href="animes/j/jujutsukaisen.html" class="anime-card">
-  <div data-status="ongoing">
-    <img src="assets/imagenes/jujutsukaisen.jpg" alt="Jujutsu Kaisen" />
-    <h3>Jujutsu Kaisen</h3>
-    <span class="estado">En emisión</span>
-  </div>
-</a>
-    <a href="animes/o/onepiece.html" class="anime-card">
-  <div data-status="ongoing">
-    <img src="assets/imagenes/onepiece.webp" alt="One Piece" />
-    <h3>One Piece</h3>
-    <span class="estado">En emisión</span>
-  </div>
-</a>
+      <a href="animes/o/onepiece.html" class="anime-card-link">
+        <div class="anime-card">
+          <img src="assets/imagenes/onepiece.webp" alt="One Piece" />
+          <h3>One Piece</h3>
+          <span class="estado verde">En emisión</span>
+        </div>
+      </a>
 
-  </section>
+      <a href="animes/a/akamegakill.html" class="anime-card-link">
+        <div class="anime-card">
+          <img src="assets/imagenes/akamegakill.webp" alt="Akame ga Kill!" />
+          <h3>Akame ga Kill!</h3>
+          <span class="estado rojo">Finalizado</span>
+        </div>
+      </a>
+
+      <a href="animes/b/boruto.html" class="anime-card-link">
+        <div class="anime-card">
+          <img src="assets/imagenes/boruto.webp" alt="Boruto" />
+          <h3>Boruto</h3>
+          <span class="estado verde">En emisión</span>
+        </div>
+      </a>
+
+      <!-- Puedes añadir más aquí -->
+    </section>
+  </main>
 
   <script src="script.js"></script>
 </body>
 </html>
-
