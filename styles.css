@@ -10,17 +10,16 @@ body {
   background-color: #0f0f1a;
   color: #fff;
   font-family: 'Roboto', sans-serif;
-  width: 100%;
-  margin: 0;
-  padding: 0 3rem; /* ← margen izquierdo y derecho */
-  box-sizing: border-box;
+  padding: 0 3rem;
 }
+
 .text-brillante {
   color: #fff;
   text-shadow:
     0 0 5px rgba(255, 255, 255, 0.6),
     0 0 10px rgba(255, 255, 255, 0.4);
 }
+
 .borde-negro {
   color: white;
   text-shadow:
@@ -37,6 +36,7 @@ body {
   justify-content: space-between;
   width: 100%;
 }
+
 header {
   position: fixed;
   top: 0;
@@ -47,20 +47,11 @@ header {
   align-items: center;
   padding: 1rem 2rem;
   background-color: transparent;
-  box-shadow: none;
   transition: transform 0.3s ease-in-out;
 }
 
 .hide-header {
   transform: translateY(-100%);
-}
-
-.logo a {
-  display: inline-block;
-}
-
-.logo a img {
-  display: block;
 }
 
 .logo img {
@@ -82,12 +73,12 @@ nav a {
 }
 
 a {
-  color: inherit;         /* Hereda el color del texto del contenedor */
-  text-decoration: none;  /* Quita el subrayado */
+  color: inherit;
+  text-decoration: none;
 }
 
 a:hover {
-  color: inherit;         /* Color al pasar el ratón (puedes cambiarlo) */
+  color: inherit;
 }
 
 /* === BUSCADOR === */
@@ -139,547 +130,24 @@ a:hover {
   background-color: #eee;
 }
 
-/* === HERO SLIDER === */
-.hero-slider {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  z-index: 1;
-  transform: translateY(20px);
-  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-}
-
-.slide.active {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  z-index: 2;
-  transform: translateY(0);
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 2rem;
-}
-
-.overlay h1 {
-  font-size: 3rem;
-  font-family: 'Orbitron', sans-serif;
-  margin-bottom: 1rem;
-  color: #85E330;
-}
-
-.overlay p {
-  max-width: 700px;
-  font-size: 1.2rem;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
-
-.tags span {
-  background-color: #6240ED;
-  padding: 0.4rem 0.8rem;
-  margin: 0 0.3rem;
-  border-radius: 5px;
-  font-size: 0.9rem;
-  font-weight: bold;
-}
-
-.ver-btn {
-  margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
-  background-color: #85E330;
-  color: #000;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-/* === SLIDER DOTS === */
-.slider-dots {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-  z-index: 10;
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.dot.active {
-  background-color: #85E330;
-}
-
-/* === CATALOGO === */
-.catalogo {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
-  margin-top: 4rem; /* para que no se solape con el carrusel */
-}
-
-.anime-card {
-  background-color: #1a1a2e;
-  border-radius: 10px;
-  overflow: hidden;
-  text-align: center;
-  box-shadow: 0 0 10px #000;
-  transition: transform 0.3s ease;
-}
-
-.anime-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px #6240ED;
-}
-
-.anime-card img {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-}
-
-.anime-card h3 {
-  padding: 0.5rem;
-}
-
-.estado {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
-  color: #85E330;
-}
-
-/* === SCROLL TEXT (si usas esta clase en algún sitio) === */
-.scroll-text {
-  max-height: 150px;
-  overflow-y: auto;
-  padding: 1rem;
-  background-color: #16213e;
-  border-radius: 8px;
-  box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
-  margin-top: 1rem;
-}
-
-.scroll-text p {
-  margin: 0;
-  line-height: 1.6;
-}
-
-.anime-card-link {
-  text-decoration: none;
-}
-
-.anime-card.full-image {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-
-.anime-card.full-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.anime-card.full-image .card-info {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 1rem;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-
-.anime-card.full-image h3 {
-  color: white;
-  font-size: 1.2rem;
-  margin: 0;
-}
-
-.anime-card.full-image .estado {
-  color: #A259FF; /* morado */
-  font-weight: bold;
-  font-size: 0.9rem;
-  align-self: flex-start;
-}
-
-.chapter-card {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 400px;
-  border-radius: 10px;
-  overflow: hidden;
-  text-decoration: none;
-  background-color: #111;
-  transition: transform 0.3s ease;
-}
-
-.chapter-card:hover {
-  transform: scale(1.02);
-}
-
-.chapter-image {
-  position: relative;
-  width: 100%;
-  height: auto;
-}
-
-.chapter-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.chapter-number {
-  position: absolute;
-  bottom: 8px;
-  left: 12px;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
-  font-size: 0.9rem;
-  padding: 4px 8px;
-  border-radius: 4px;
-}
-
-.chapter-info {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-  color: white;
-}
-
-.chapter-anime {
-  font-size: 1.2rem;
-  margin: 0;
-}
-
-.chapter-type {
-  color: #A259FF; /* morado */
-  font-weight: bold;
-  font-size: 0.9rem;
-}
-
-.chapter-time {
-  font-size: 0.8rem;
-  opacity: 0.8;
-}
-
-
-
-
-
-
-
-
-
-/* Imagen grande con título encima */
-.anime-portada {
-  position: relative;
-  width: 100%;
-  max-width: 800px;
-  margin-bottom: 1rem;
-}
-
-.anime-portada img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.titulo-en-imagen {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  color: white;
-  font-size: 2rem;
-  background-color: rgba(0,0,0,0.6);
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-}
-
-/* Estado y temporada */
-.anime-info {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.estado {
-  padding: 0.3rem 0.8rem;
-  border-radius: 5px;
-  font-weight: bold;
-  color: white;
-}
-
-.estado.verde {
-  background-color: #4CAF50;
-}
-
-.estado.rojo {
-  background-color: #E53935;
-}
-
-.temporada {
-  font-size: 1rem;
-  color: #ccc;
-}
-
-/* Capítulos, descripción, géneros, tipo */
-.capitulos-info,
-.descripcion,
-.generos,
-.tipo {
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  color: white;
-}
-
-/* Episodios */
-.episodios h2 {
-  font-size: 1.5rem;
-  margin: 2rem 0 1rem;
-  color: #85E330;
-}
-/* === Página individual de anime === */
+/* === PÁGINA DE ANIME === */
 body.pagina-anime {
   background-color: #0d0d0d;
-  color: white;
-  font-family: 'Segoe UI', sans-serif;
-  padding: 2rem;
+  padding-top: 100px; /* espacio para header fijo */
 }
 
-.anime-detalle {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.anime-portada {
-  position: relative;
-  width: 100%;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-bottom: 1rem;
-}
-
-.anime-portada img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.titulo-en-imagen {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: white;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-}
-
-.anime-info {
+.layout-anime {
   display: flex;
-  gap: 1rem;
-  align-items: center;
-  margin-bottom: 1rem;
+  align-items: flex-start;
+  gap: 4rem;
+  padding: 2rem 0;
 }
 
-.estado {
-  padding: 0.3rem 0.8rem;
-  border-radius: 5px;
-  font-weight: bold;
-  color: white;
-}
-
-.estado.verde {
-  background-color: #4CAF50;
-}
-
-.estado.rojo {
-  background-color: #E53935;
-}
-
-.temporada {
-  font-size: 1rem;
-  color: #ccc;
-}
-
-.capitulos-info,
-.descripcion,
-.generos,
-.tipo {
-  margin-bottom: 1rem;
-  font-size: 1rem;
-}
-
-.episodios h2 {
-  font-size: 1.5rem;
-  margin: 2rem 0 1rem;
-  color: #85E330;
-}
-
-.capitulos {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.pcontent {
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 1rem;
-  color: white;
-}
-.pcontent {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 1rem;
-  color: white;
-}
-
-#animeinfo {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.portada-anime {
-  width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-}
-
-.detail-anime {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 1.5rem;
-  border-radius: 10px;
-}
-
-.comics-title {
-  font-size: 2.2rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-.comics-alt {
-  font-size: 1.2rem;
-  color: #ccc;
-  margin-bottom: 1rem;
-}
-
-.details-by {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-  color: #ddd;
-}
-
-.tag-2 {
-  padding: 0.3rem 0.8rem;
-  border-radius: 5px;
-  font-weight: bold;
-  color: white;
-}
-
-.tag-2.verde {
-  background-color: #4CAF50;
-}
-
-.tag-2.rojo {
-  background-color: #E53935;
-}
-
-.comics-caps {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-
-#sinopsis p {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-.sinopsis {
-  max-width: 400px; /* ajusta según lo que necesites */
-  max-height: 150px;
-  overflow-y: auto;
-}
-
-/* Opcional: estilo para scrollbar */
-.sinopsis::-webkit-scrollbar {
-  width: 6px;
-}
-
-.sinopsis::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 3px;
-}
-.anime-genres a {
-  display: inline-block;
-  margin-right: 0.5rem;
-  padding: 0.3rem 0.6rem;
-  background-color: #6240ED;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  margin-top: 1.5rem; /* ajusta según lo que necesites */
-}
-
-.estado {
-  display: inline-block;
-  margin-top: 1.5rem;
-  font-weight: bold;
-  color: #85E330;
-}
 .portada-superpuesta {
+  width: 65%;
   position: relative;
-  width: 60%;
-  border-radius: 10px;
-  overflow: hidden;
 }
 
-/* Imagen con gradiente separado */
 .imagen-con-gradiente {
   position: relative;
 }
@@ -688,22 +156,20 @@ body.pagina-anime {
   width: 100%;
   height: auto;
   display: block;
-  filter: brightness(1); /* imagen normal */
+  border-radius: 10px;
 }
 
-/* Gradiente oscuro en la izquierda, brillante en la derecha */
 .gradiente-izquierda {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(255,255,255,0));
-  z-index: 1;
+  background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0));
   pointer-events: none;
+  z-index: 1;
 }
 
-/* Texto encima de todo, sin afectar por el gradiente */
 .contenido-superpuesto {
   position: absolute;
   top: 0;
@@ -718,36 +184,10 @@ body.pagina-anime {
   z-index: 2;
 }
 
-/* Texto claro y brillante */
 .texto-claro {
   color: #ffffff;
-  text-shadow:
-    text-shadow: 1px 1px 0 #000;
+  text-shadow: 1px 1px 0 #000;
   font-weight: 600;
-}
-/* 🌓 Gradiente oscuro en la izquierda */
-.overlay-izquierda {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0));
-  pointer-events: none;
-  z-index: 1;
-}
-.contenido-superpuesto {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 2rem;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
-  z-index: 2;
 }
 
 .comics-title {
@@ -791,76 +231,23 @@ body.pagina-anime {
   text-decoration: none;
   font-size: 0.9rem;
 }
-/* Igual margen que la imagen superior */
-.episodios-section {
-  margin: 5rem 0 2rem 3rem;
-  width: 90%;
+
+.sinopsis {
+  max-width: 400px;
+  max-height: 150px;
+  overflow-y: auto;
 }
 
-/* Título verde como en index */
-.episodios-titulo {
-  color: #00c853;
-  font-size: 1.5rem;
-  font-weight: 600;
- margin: 0 0 1rem 3rem;
+.sinopsis::-webkit-scrollbar {
+  width: 6px;
 }
 
-/* Grid compacto */
-.episodios-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1rem;
+.sinopsis::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
 }
 
-/* Tarjeta con imagen de fondo */
-.episodio-card {
-  position: relative;
-  height: 150px;
-  border-radius: 8px;
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-  display: flex;
-  align-items: flex-end;
-  transition: transform 0.3s ease;
-}
-
-.episodio-card:hover {
-  transform: scale(1.02);
-}
-
-/* Capa oscura para que el texto se lea */
-.episodio-overlay {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 0.5rem;
-  width: 100%;
-  color: #fff;
-}
-
-/* Texto dentro de cada episodio */
-.episodio-numero {
-  font-weight: bold;
-  color: #00c853;
-  font-size: 0.9rem;
-}
-
-.episodio-titulo {
-  font-size: 0.85rem;
-  line-height: 1.3;
-  margin-top: 0.2rem;
-}
-
-
-
-
-.layout-anime {
-  display: flex;
-  align-items: flex-start;
-  gap: 7rem;
-  padding: 0 6rem;
-  margin-top: 6rem;
-}
-
+/* === ANIMES SIMILARES === */
 .similar-animes {
   width: 300px;
   background-color: rgba(0, 0, 0, 0.6);
@@ -868,13 +255,12 @@ body.pagina-anime {
   border-radius: 8px;
   color: #fff;
   flex-shrink: 0;
-  margin-right: 3rem; /* margen derecho extra */
-  overflow-y: auto; /* scroll interno si hay muchas tarjetas */
+  overflow-y: auto;
 }
 
 .similar-animes h3 {
   font-size: 1.3rem;
-  color: #85E330; /* verde vibrante */
+  color: #85E330;
   margin-bottom: 1rem;
 }
 
@@ -913,29 +299,35 @@ body.pagina-anime {
   color: #3DD7FF;
 }
 
+/* === EPISODIOS === */
+.episodios-section {
+  margin: 4rem 0;
+}
 
+.episodios-titulo {
+  color: #00c853;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+}
 
 .caps_pagination {
-  margin: 1rem 0 1rem 3rem;
+  margin: 1rem 0;
   padding: 0.5rem;
   font-size: 1rem;
   border-radius: 6px;
   background-color: #222;
   color: #b388ff;
   border: none;
+  width: 100%;
+  max-width: 300px;
 }
 
 .episodios-bloque {
   display: none;
   grid-template-columns: repeat(5, 1fr);
   gap: 1.5rem;
-  margin: 3rem 3rem;
-  padding: 0;
-  box-sizing: border-box;
-  transition: all 0.3s ease;
-  visibility: hidden;
-  height: 0;
-  overflow: hidden;
+  margin: 2rem 0;
 }
 
 .episodios-bloque.activo {
