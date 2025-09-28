@@ -46,17 +46,40 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => resultsBox.style.display = 'none', 200);
   });
 
-  // === PAGINACIÓN DE EPISODIOS ===
-  const selector = document.getElementById('rango-episodios');
-  const bloques = document.querySelectorAll('.episodios-bloque');
+  // === GENERADOR DINÁMICO DE EPISODIOS ===
+const totalEpisodios = 1144;
+const episodiosPorBloque = 25;
+const contenedorEpisodios = document.getElementById('contenedor-episodios');
+const selectBloque = document.getElementById('rango-episodios');
 
-  if (selector) {
-    selector.addEventListener('change', () => {
-      bloques.forEach(b => b.classList.remove('activo'));
-      const seleccionado = document.getElementById(selector.value);
-      if (seleccionado) seleccionado.classList.add('activo');
-    });
+if (contenedorEpisodios && selectBloque) {
+  function generarEpisodios(bloqueNumero) {
+    contenedorEpisodios.innerHTML = '';
+    const inicio = (bloqueNumero - 1) * episodiosPorBloque + 1;
+    const fin = bloqueNumero === 46 ? totalEpisodios : Math.min(bloqueNumero * episodiosPorBloque, totalEpisodios);
+
+    for (let i = inicio; i <= fin; i++) {
+      const episodio = document.createElement('div');
+      episodio.className = 'episodio';
+      episodio.innerHTML = `
+        <a href="episodios/episodio${i}.html">
+          <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio ${i}">
+          <span class="episodio-texto">Episodio ${i}</span>
+        </a>
+      `;
+      contenedorEpisodios.appendChild(episodio);
+    }
   }
+
+  // Cargar primer bloque al iniciar
+  generarEpisodios(1);
+
+  // Cambiar al seleccionar
+  selectBloque.addEventListener('change', (e) => {
+    const bloque = parseInt(e.target.value);
+    generarEpisodios(bloque);
+  });
+}
 
   // === ANIMES SIMILARES ===
   function quitarTildes(str) {
