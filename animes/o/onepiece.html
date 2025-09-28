@@ -5,486 +5,118 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>One Piece | ViciAnime</title>
   <link rel="stylesheet" href="../../styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Orbitron&display=swap" rel="stylesheet">
 </head>
 <body class="pagina-anime">
-  <!-- ✅ HEADER -->
-    <header>
-  <div class="header-content">
-    <div class="logo">
-      <a href="../../index.html">
-        <img src="../../assets/imagenes/Anime-removebg-preview.png" alt="ViciAnime Logo" />
-      </a>
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../../assets/imagenes/Anime-removebg-preview.png" alt="ViciAnime Logo" />
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../../index.html">Inicio</a></li>
+          <li><a href="../../catalogo.html">Catálogo</a></li>
+          <li><a href="../../calendario.html">Calendario</a></li>
+          <li><a href="../../perfil.html">Perfil</a></li>
+        </ul>
+      </nav>
+      <div class="search-box">
+        <input type="text" id="anime-search" placeholder="Buscar anime..." />
+        <ul id="search-results"></ul>
+      </div>
     </div>
-    <nav>
-      <ul>
-        <li><a href="../../index.html">Inicio</a></li>
-        <li><a href="../../catalogo.html">Catálogo</a></li>
-        <li><a href="../../calendario.html">Calendario</a></li>
-        <li><a href="../../perfil.html">Perfil</a></li>
-      </ul>
-    </nav>
-    <div class="search-box">
-      <input type="text" id="anime-search" placeholder="Buscar anime..." />
-      <ul id="search-results"></ul>
-    </div>
-  </div>
-</header>
+  </header>
 
-<!-- NUEVO CONTENEDOR FLEXIBLE -->
-<div class="layout-anime">
-  <!-- BLOQUE DE IMAGEN Y CONTENIDO SUPERPUESTO -->
-  <div class="portada-superpuesta">
-    <div class="imagen-con-gradiente">
-      <img src="../../assets/imagenes/onepiece.webp" alt="One Piece" />
-      <div class="gradiente-izquierda"></div>
-    </div>
-
-    <div class="contenido-superpuesto">
-      <h1 class="comics-title texto-claro">One Piece</h1>
-      <h3 class="comics-alt texto-claro">ワンピース</h3>
-
-      <div class="details-by texto-claro">
-        <span class="tag-2 verde">En emisión</span>
-        <span class="mgr texto-claro">•</span> Verano 1999
+  <div class="layout-anime">
+    <div class="portada-superpuesta">
+      <div class="imagen-con-gradiente">
+        <img src="../../assets/imagenes/onepiece.webp" alt="One Piece" />
+        <div class="gradiente-izquierda"></div>
       </div>
 
-      <h3 class="comics-caps texto-claro">1144 / ??? Capítulos</h3>
-
-      <div class="sinopsis texto-claro">
-        <p>
-          One Piece narra la historia de Monkey D. Luffy, un joven que sueña con convertirse en el Rey de los Piratas. Tras comer accidentalmente una Akuma no Mi, obtiene poderes de goma, lo que lo convierte en un hombre elástico. Inspirado por Gol D. Roger —el legendario pirata ejecutado por la Marina que reveló la existencia del tesoro “One Piece” antes de morir— y por Shanks el pelirrojo, Luffy decide zarpar en busca de aventuras. En su viaje por la Grand Line, reúne una tripulación única conocida como los Sombrero de Paja, cada uno con sueños propios y habilidades extraordinarias. Juntos enfrentan enemigos poderosos, gobiernos corruptos y criaturas míticas, mientras descubren secretos del mundo y del pasado.
-        </p>
-      </div>
-
-      <div class="anime-genres texto-claro">
-        <a href="#">Acción</a>
-        <a href="#">Aventura</a>
-        <a href="#">Fantasía</a>
-        <a href="#">Comedia</a>
-      </div>
-
-      <span class="estado texto-claro">Anime</span>
-    </div>
-  </div>
-
-  <!-- BLOQUE DE ANIMES SIMILARES -->
-  <aside class="similar-animes">
-    <h3>Animes similares</h3>
-
-    <div class="anime-card">
-      <a href="overlord.html">
-        <img src="../../assets/imagenes/overlord1.jpg" alt="Overlord" />
-        <div class="anime-info">
-          <span class="anime-title">Overlord</span>
-          <span class="anime-meta">2015 - Finalizado</span>
+      <div class="contenido-superpuesto">
+        <h1 class="comics-title texto-claro">One Piece</h1>
+        <h3 class="comics-alt texto-claro">ワンピース</h3>
+        <div class="details-by texto-claro">
+          <span class="tag-2 verde">En emisión</span>
+          <span>•</span> Verano 1999
         </div>
-      </a>
+        <h3 class="comics-caps texto-claro">1144 / ??? Capítulos</h3>
+        <div class="sinopsis texto-claro">
+          <p>
+            One Piece narra la historia de Monkey D. Luffy, un joven que sueña con convertirse en el Rey de los Piratas...
+          </p>
+        </div>
+        <div class="anime-genres texto-claro">
+          <a href="#">Acción</a>
+          <a href="#">Aventura</a>
+          <a href="#">Fantasía</a>
+          <a href="#">Comedia</a>
+        </div>
+        <span class="estado texto-claro">Anime</span>
+      </div>
     </div>
 
-    <div class="anime-card">
-      <a href="slime.html">
-        <img src="../../assets/imagenes/tenseislime1.jpg" alt="Tensei Slime" />
-        <div class="anime-info">
-          <span class="anime-title">Tensei Slime</span>
-          <span class="anime-meta">2018 - Finalizado</span>
-        </div>
-      </a>
-    </div>
-    <!-- Puedes añadir más tarjetas aquí -->
-  </aside>
-</div>
+    <aside class="similar-animes">
+      <h3>Animes similares</h3>
+      <div class="anime-card">
+        <a href="overlord.html">
+          <img src="../../assets/imagenes/overlord1.jpg" alt="Overlord" />
+          <div class="anime-info">
+            <span class="anime-title">Overlord</span>
+            <span class="anime-meta">2015 - Finalizado</span>
+          </div>
+        </a>
+      </div>
+      <div class="anime-card">
+        <a href="slime.html">
+          <img src="../../assets/imagenes/tenseislime1.jpg" alt="Tensei Slime" />
+          <div class="anime-info">
+            <span class="anime-title">Tensei Slime</span>
+            <span class="anime-meta">2018 - Finalizado</span>
+          </div>
+        </a>
+      </div>
+    </aside>
+  </div>
+
   <div class="episodios-section">
-  <h2 class="episodios-titulo">Episodios</h2>
+    <h2 class="episodios-titulo">Episodios</h2>
+    <select class="caps_pagination" id="rango-episodios">
+      <option value="pag1">Episodios 1 - 25</option>
+      <option value="pag2">Episodios 26 - 50</option>
+      <!-- Añade más opciones si lo deseas -->
+    </select>
 
-<select class="caps_pagination" id="rango-episodios">
-  <option value="pag1">Episodios 1 - 25</option>
-  <option value="pag2">Episodios 26 - 50</option>
-  <option value="pag3">Episodios 51 - 75</option>
-  <option value="pag4">Episodios 76 - 100</option>
-  <option value="pag5">Episodios 101 - 125</option>
-  <option value="pag6">Episodios 126 - 150</option>
-  <option value="pag7">Episodios 151 - 175</option>
-  <option value="pag8">Episodios 176 - 200</option>
-  <option value="pag9">Episodios 201 - 225</option>
-  <option value="pag10">Episodios 226 - 250</option>
-  <option value="pag11">Episodios 251 - 275</option>
-  <option value="pag12">Episodios 276 - 300</option>
-  <option value="pag13">Episodios 301 - 325</option>
-  <option value="pag14">Episodios 326 - 350</option>
-  <option value="pag15">Episodios 351 - 375</option>
-  <option value="pag16">Episodios 376 - 400</option>
-  <option value="pag17">Episodios 401 - 425</option>
-  <option value="pag18">Episodios 426 - 450</option>
-  <option value="pag19">Episodios 451 - 475</option>
-  <option value="pag20">Episodios 476 - 500</option>
-  <option value="pag21">Episodios 501 - 525</option>
-  <option value="pag22">Episodios 526 - 550</option>
-  <option value="pag23">Episodios 551 - 575</option>
-  <option value="pag24">Episodios 576 - 600</option>
-  <option value="pag25">Episodios 601 - 625</option>
-  <option value="pag26">Episodios 626 - 650</option>
-  <option value="pag27">Episodios 651 - 675</option>
-  <option value="pag28">Episodios 676 - 700</option>
-  <option value="pag29">Episodios 701 - 725</option>
-  <option value="pag30">Episodios 726 - 750</option>
-  <option value="pag31">Episodios 751 - 775</option>
-  <option value="pag32">Episodios 776 - 800</option>
-  <option value="pag33">Episodios 801 - 825</option>
-  <option value="pag34">Episodios 826 - 850</option>
-  <option value="pag35">Episodios 851 - 875</option>
-  <option value="pag36">Episodios 876 - 900</option>
-  <option value="pag37">Episodios 901 - 925</option>
-  <option value="pag38">Episodios 926 - 950</option>
-  <option value="pag39">Episodios 951 - 975</option>
-  <option value="pag40">Episodios 976 - 1000</option>
-  <option value="pag41">Episodios 1001 - 1025</option>
-  <option value="pag42">Episodios 1026 - 1050</option>
-  <option value="pag43">Episodios 1051 - 1075</option>
-  <option value="pag44">Episodios 1076 - 1100</option>
-  <option value="pag45">Episodios 1101 - 1125</option>
-  <option value="pag46">Episodios 1126 - 1144</option>
-  <!-- Añade más si lo necesitas -->
-</select>
+    <!-- Bloques de episodios -->
+    <div id="pag1" class="episodios-bloque activo">
+      <!-- Episodios 1-25 -->
+      <!-- Ejemplo: -->
+      <div class="episodio">
+        <a href="episodios/episodio1.html">
+          <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 1">
+          <span class="episodio-texto">Episodio 1</span>
+        </a>
+      </div>
+      <!-- Repite hasta el 25 -->
+    </div>
 
-<!-- Bloques de episodios ocultos por defecto -->
-<div id="pag1" class="episodios-bloque">
-  <div class="episodio">
-    <a href="episodios/episodio1.html">
-      <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 1">
-      <span class="episodio-texto">Episodio 1</span>
-    </a>
+    <div id="pag2" class="episodios-bloque">
+      <!-- Episodios 26-50 -->
+      <div class="episodio">
+        <a href="episodios/episodio26.html">
+          <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 26">
+          <span class="episodio-texto">Episodio 26</span>
+        </a>
+      </div>
+      <!-- Repite hasta el 50 -->
+    </div>
   </div>
-  <div class="episodio">
-    <a href="episodios/episodio1.html">
-      <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 1">
-      <span class="episodio-texto">Episodio 2</span>
-    </a>
-  </div>
-  <div class="episodio">
-    <a href="episodios/episodio1.html">
-      <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 1">
-      <span class="episodio-texto">Episodio 3</span>
-    </a>
-  </div>
-  <div class="episodio">
-    <a href="episodios/episodio1.html">
-      <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 1">
-      <span class="episodio-texto">Episodio 4</span>
-    </a>
-  </div>
-  <div class="episodio">
-    <a href="episodios/episodio1.html">
-      <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 1">
-      <span class="episodio-texto">Episodio 5</span>
-    </a>
-  </div>
-  <div class="episodio">
-  <a href="episodios/episodio6.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 6">
-    <span class="episodio-texto">Episodio 6</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio7.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 7">
-    <span class="episodio-texto">Episodio 7</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio8.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 8">
-    <span class="episodio-texto">Episodio 8</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio9.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 9">
-    <span class="episodio-texto">Episodio 9</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio10.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 10">
-    <span class="episodio-texto">Episodio 10</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio11.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 11">
-    <span class="episodio-texto">Episodio 11</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio12.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 12">
-    <span class="episodio-texto">Episodio 12</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio13.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 13">
-    <span class="episodio-texto">Episodio 13</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio14.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 14">
-    <span class="episodio-texto">Episodio 14</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio15.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 15">
-    <span class="episodio-texto">Episodio 15</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio16.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 16">
-    <span class="episodio-texto">Episodio 16</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio17.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 17">
-    <span class="episodio-texto">Episodio 17</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio18.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 18">
-    <span class="episodio-texto">Episodio 18</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio19.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 19">
-    <span class="episodio-texto">Episodio 19</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio20.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 20">
-    <span class="episodio-texto">Episodio 20</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio21.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 21">
-    <span class="episodio-texto">Episodio 21</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio22.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 22">
-    <span class="episodio-texto">Episodio 22</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio23.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 23">
-    <span class="episodio-texto">Episodio 23</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio24.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 24">
-    <span class="episodio-texto">Episodio 24</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio25.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 25">
-    <span class="episodio-texto">Episodio 25</span>
-  </a>
-</div>
-  <!-- hasta el 25 -->
-</div>
 
-<div id="pag2" class="episodios-bloque" style="display: none;">
-<div class="episodio">
-  <a href="episodios/episodio26.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 26">
-    <span class="episodio-texto">Episodio 26</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio27.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 27">
-    <span class="episodio-texto">Episodio 27</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio28.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 28">
-    <span class="episodio-texto">Episodio 28</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio29.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 29">
-    <span class="episodio-texto">Episodio 29</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio30.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 30">
-    <span class="episodio-texto">Episodio 30</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio31.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 31">
-    <span class="episodio-texto">Episodio 31</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio32.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 32">
-    <span class="episodio-texto">Episodio 32</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio33.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 33">
-    <span class="episodio-texto">Episodio 33</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio34.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 34">
-    <span class="episodio-texto">Episodio 34</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio35.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 35">
-    <span class="episodio-texto">Episodio 35</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio36.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 36">
-    <span class="episodio-texto">Episodio 36</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio37.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 37">
-    <span class="episodio-texto">Episodio 37</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio38.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 38">
-    <span class="episodio-texto">Episodio 38</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio39.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 39">
-    <span class="episodio-texto">Episodio 39</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio40.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 40">
-    <span class="episodio-texto">Episodio 40</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio41.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 41">
-    <span class="episodio-texto">Episodio 41</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio42.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 42">
-    <span class="episodio-texto">Episodio 42</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio43.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 43">
-    <span class="episodio-texto">Episodio 43</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio44.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 44">
-    <span class="episodio-texto">Episodio 44</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio45.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 45">
-    <span class="episodio-texto">Episodio 45</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio46.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 46">
-    <span class="episodio-texto">Episodio 46</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio47.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 47">
-    <span class="episodio-texto">Episodio 47</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio48.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 48">
-    <span class="episodio-texto">Episodio 48</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio49.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 49">
-    <span class="episodio-texto">Episodio 49</span>
-  </a>
-</div>
-<div class="episodio">
-  <a href="episodios/episodio50.html">
-    <img src="../../assets/imagenes/onepiececaps.webp" alt="Episodio 50">
-    <span class="episodio-texto">Episodio 50</span>
-  <!-- hasta el 50 -->
-</div>
-
-<div id="pag3" class="episodios-bloque" style="display: none;">
-  <div class="episodio">Episodio 51</div>
-  <!-- hasta el 75 -->
-</div>
-
-<div id="pag4" class="episodios-bloque" style="display: none;">
-  <div class="episodio">Episodio 76</div>
-  <!-- hasta el 100 -->
-</div>
-
-</div>
-
-  <!-- ⏱️ Script para tiempo real -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
-  <script>
-    timeago.render(document.querySelectorAll('.chapter-time'));
-  </script>
   <script src="../../script.js"></script>
-  <script>
-document.addEventListener('DOMContentLoaded', () => {
-  const selector = document.getElementById('rango-episodios');
-  const bloques = document.querySelectorAll('.episodios-bloque');
-
-  selector.addEventListener('change', () => {
-    const valor = selector.value;
-
-    bloques.forEach(bloque => {
-      bloque.style.display = bloque.id === valor ? 'flex' : 'none';
-    });
-  });
-});
-</script>
 </body>
 </html>
-
