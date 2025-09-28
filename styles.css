@@ -321,6 +321,11 @@ a:hover {
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 200px; /* ✅ Ancho fijo */
+  height: 300px; /* ✅ Alto fijo */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .anime-card:hover {
@@ -330,8 +335,10 @@ a:hover {
 
 .anime-card img {
   width: 100%;
-  height: 300px; /* ✅ Imágenes más grandes */
-  object-fit: cover;
+  height: 200px; /* ✅ Altura fija para la imagen */
+  object-fit: cover; /* Recorta manteniendo proporción */
+  object-position: center;
+  display: block;
 }
 
 .anime-card h3 {
