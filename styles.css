@@ -5,12 +5,25 @@
   box-sizing: border-box;
 }
 
+/* === ESTILO BASE PARA TODAS LAS PÁGINAS === */
 body {
   overflow-x: hidden;
   background-color: #0f0f1a;
   color: #fff;
   font-family: 'Roboto', sans-serif;
-  padding: 0 3rem;
+  margin: 0;
+  padding: 0 3rem; /* margen izquierdo y derecho */
+}
+
+/* === ESPACIO PARA HEADER FIJO (todas las páginas) === */
+body:not(.pagina-anime) {
+  padding-top: 100px; /* altura del header + margen */
+}
+
+/* === PÁGINA INDIVIDUAL DE ANIME === */
+body.pagina-anime {
+  background-color: #0d0d0d;
+  padding-top: 100px; /* también necesita espacio para el header */
 }
 
 .text-brillante {
@@ -130,12 +143,240 @@ a:hover {
   background-color: #eee;
 }
 
-/* === PÁGINA DE ANIME === */
-body.pagina-anime {
-  background-color: #0d0d0d;
-  padding-top: 100px; /* espacio para header fijo */
+/* === HERO SLIDER (solo en index.html) === */
+.hero-slider {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin-left: calc(-3rem); /* compensa el padding del body */
+  margin-right: calc(-3rem);
 }
 
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 1;
+  transform: translateY(20px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  z-index: 2;
+  transform: translateY(0);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.overlay h1 {
+  font-size: 3rem;
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 1rem;
+  color: #85E330;
+}
+
+.overlay p {
+  max-width: 700px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.tags span {
+  background-color: #6240ED;
+  padding: 0.4rem 0.8rem;
+  margin: 0 0.3rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.ver-btn {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #85E330;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* === SLIDER DOTS === */
+.slider-dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #85E330;
+}
+
+/* === CATÁLOGO (en index.html y catalogo.html) === */
+.titulo-catalogo {
+  text-align: center;
+  font-size: 2.2rem;
+  margin: 1rem 0 2rem;
+  color: #85E330;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem 3rem;
+}
+
+.anime-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.anime-card {
+  background-color: #1a1a2e;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.anime-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #6240ED;
+}
+
+.anime-card img {
+  width: 100%;
+  height: 240px; /* altura fija para uniformidad */
+  object-fit: cover; /* recorta manteniendo proporción */
+}
+
+.anime-card h3 {
+  padding: 0.6rem 0.4rem 0.2rem;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+/* === ESTADO DEL ANIME === */
+.estado {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.estado.verde {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.estado.rojo {
+  background-color: #E53935;
+  color: white;
+}
+
+/* === CAPÍTULOS RECIENTES (en index.html) === */
+.chapter-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  background-color: #111;
+  transition: transform 0.3s ease;
+}
+
+.chapter-card:hover {
+  transform: scale(1.02);
+}
+
+.chapter-image {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.chapter-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.chapter-number {
+  position: absolute;
+  bottom: 8px;
+  left: 12px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 0.9rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.chapter-info {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  color: white;
+}
+
+.chapter-anime {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.chapter-type {
+  color: #A259FF;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* === PÁGINA DE ANIME (detalle) === */
 .layout-anime {
   display: flex;
   align-items: flex-start;
@@ -262,18 +503,6 @@ body.pagina-anime {
   font-size: 1.3rem;
   color: #85E330;
   margin-bottom: 1rem;
-}
-
-.anime-card {
-  margin-bottom: 1rem;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 6px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.anime-card:hover {
-  transform: scale(1.02);
 }
 
 .anime-card img {
