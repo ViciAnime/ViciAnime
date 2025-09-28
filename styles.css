@@ -250,25 +250,68 @@ a:hover {
   background-color: #85E330;
 }
 
-/* === CATÁLOGO (en index.html y catalogo.html) === */
+/* === TÍTULO DEL CATÁLOGO === */
 .titulo-catalogo {
   text-align: center;
   font-size: 2.2rem;
-  margin: 1rem 0 2rem;
+  margin: 1rem 0 1.5rem;
   color: #85E330;
   font-family: 'Orbitron', sans-serif;
 }
 
-.catalogo {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 2rem;
-  padding: 0 1rem 3rem;
+/* === FILTROS EN LA PARTE SUPERIOR DERECHA === */
+.filtros-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
 }
 
-.anime-card-link {
-  text-decoration: none;
-  color: inherit;
+.filtro-btn {
+  background-color: #1a1a2e;
+  border: none;
+  color: white;
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.filtro-btn:hover {
+  background-color: #2a2a3e;
+}
+
+.filtro-btn .arrow {
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+.filtrar-btn {
+  background-color: #85E330;
+  color: #000;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.filtrar-btn:hover {
+  background-color: #70c820;
+}
+
+/* === CATÁLOGO GRID (con imágenes más grandes) === */
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem 3rem;
 }
 
 .anime-card {
@@ -287,8 +330,8 @@ a:hover {
 
 .anime-card img {
   width: 100%;
-  height: 240px; /* altura fija para uniformidad */
-  object-fit: cover; /* recorta manteniendo proporción */
+  height: 300px; /* ✅ Imágenes más grandes */
+  object-fit: cover;
 }
 
 .anime-card h3 {
@@ -297,6 +340,25 @@ a:hover {
   color: #fff;
 }
 
+/* === ESTADO (verde = emisión, rojo = finalizado) === */
+.estado {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.estado.verde {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.estado.rojo {
+  background-color: #E53935;
+  color: white;
+}
 /* === ESTADO DEL ANIME === */
 .estado {
   display: inline-block;
