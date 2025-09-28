@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo | ViciAnime</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- HEADER (igual que en index.html) -->
+  <!-- HEADER -->
   <header>
     <div class="header-content">
       <div class="logo">
@@ -33,8 +34,38 @@
   <!-- CONTENEDOR PRINCIPAL -->
   <main class="main-content">
     <h1 class="titulo-catalogo">Catálogo Completo</h1>
+
+    <!-- FILTROS (derecha) -->
+    <div class="filtros-container">
+      <button class="filtro-btn">
+        Animes recientes
+        <span class="arrow">▼</span>
+      </button>
+      <button class="filtro-btn">
+        Categoría
+        <span class="arrow">▼</span>
+      </button>
+      <button class="filtro-btn">
+        Idioma
+        <span class="arrow">▼</span>
+      </button>
+      <button class="filtro-btn">
+        Género
+        <span class="arrow">▼</span>
+      </button>
+      <button class="filtro-btn">
+        Año
+        <span class="arrow">▼</span>
+      </button>
+      <button class="filtro-btn">
+        Letra
+        <span class="arrow">▼</span>
+      </button>
+      <button class="filtrar-btn">Filtrar</button>
+    </div>
+
+    <!-- CATÁLOGO DE ANIMES -->
     <section class="catalogo" id="catalogo">
-      <!-- Tarjetas se generan aquí -->
       <a href="animes/j/jujutsukaisen.html" class="anime-card-link">
         <div class="anime-card">
           <img src="assets/imagenes/jujutsukaisen.jpg" alt="Jujutsu Kaisen" />
