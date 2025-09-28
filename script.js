@@ -158,3 +158,4 @@ document.addEventListener('DOMContentLoaded', () => {
   // Mostrar el primer bloque al cargar
   document.getElementById('pag1').classList.add('activo');
 });
+
