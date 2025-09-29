@@ -229,53 +229,136 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // === CARGA DINÁMICA DE ANIMES ===
-  async function cargarAnimes() {
-    try {
-      const response = await fetch('animes.json');
-      if (!response.ok) throw new Error('No se pudo cargar animes.json');
-      const animes = await response.json();
-      const contenedor = document.getElementById('catalogo');
+ // === CARGA DINÁMICA DE ANIMES CON PAGINACIÓN ===
+let currentPage = 1;
+const itemsPerPage = 21; // 3 filas × 7 animes
 
-      if (!contenedor) {
-        console.error('❌ No se encontró el contenedor #catalogo');
-        return;
-      }
+async function cargarAnimes() {
+  try {
+    console.log('🔍 Intentando cargar animes.json...');
+    const response = await fetch('animes.json');
+    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+    console.log('✅ animes.json cargado correctamente');
+    const animes = await response.json();
+    console.log(`📊 Total de animes: ${animes.length}`);
 
-      contenedor.innerHTML = '';
+    const contenedor = document.getElementById('catalogo');
+    const pageButtonsContainer = document.getElementById('page-buttons');
 
-      animes.forEach(anime => {
-        const tarjeta = document.createElement('a');
-        tarjeta.href = anime.ruta;
-        tarjeta.className = 'anime-card-link';
+    if (!contenedor || !pageButtonsContainer) {
+      console.error('❌ No se encontró el contenedor #catalogo o #page-buttons');
+      return;
+    }
 
-        tarjeta.innerHTML = `
-          <div class="anime-card">
-            <div style="position: relative;">
-              <img src="${anime.imagen}" alt="${anime.titulo}" />
-              ${anime.etiqueta ? `<span class="etiqueta-estreno">${anime.etiqueta}</span>` : ''}
-            </div>
-            <div class="card-info">
-              <h3>${anime.titulo}</h3>
-              <div>
-                <span class="tipo">${anime.tipo}</span>
-                <span class="estado ${anime.estado}">${anime.anio} - ${anime.estadoTexto}</span>
-              </div>
+    // Calcular total de páginas
+    const totalPages = Math.ceil(animes.length / itemsPerPage);
+
+    // Renderizar animes de la página actual
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = Math.min(startIndex + itemsPerPage, animes.length);
+    const animesPagina = animes.slice(startIndex, endIndex);
+
+    contenedor.innerHTML = '';
+
+    animesPagina.forEach(anime => {
+      const tarjeta = document.createElement('a');
+      tarjeta.href = anime.ruta;
+      tarjeta.className = 'anime-card-link';
+
+      tarjeta.innerHTML = `
+        <div class="anime-card">
+          <div style="position: relative;">
+            <img src="${anime.imagen}" alt="${anime.titulo}" />
+            ${anime.etiqueta ? `<span class="etiqueta-estreno">${anime.etiqueta}</span>` : ''}
+          </div>
+          <div class="card-info">
+            <h3>${anime.titulo}</h3>
+            <div>
+              <span class="tipo">${anime.tipo}</span>
+              <span class="estado ${anime.estado}">${anime.anio} - ${anime.estadoTexto}</span>
             </div>
           </div>
-        `;
+        </div>
+      `;
 
-        contenedor.appendChild(tarjeta);
-      });
-    } catch (error) {
-      console.error('❌ Error al cargar los animes:', error);
-      document.getElementById('catalogo').innerHTML = `<p style="color: red; text-align: center;">Error: ${error.message}</p>`;
+      contenedor.appendChild(tarjeta);
+    });
+
+    // Renderizar botones de paginación
+    renderizarPaginacion(totalPages);
+
+  } catch (error) {
+    console.error('❌ Error al cargar los animes:', error);
+    document.getElementById('catalogo').innerHTML = `
+      <p style="color: red; text-align: center;">
+        Error al cargar los animes: ${error.message}
+      </p>
+    `;
+  }
+}
+
+function renderizarPaginacion(totalPages) {
+  const container = document.getElementById('page-buttons');
+  container.innerHTML = '';
+
+  const maxVisiblePages = 7;
+  let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+  let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+
+  if (endPage - startPage + 1 < maxVisiblePages) {
+    startPage = Math.max(1, endPage - maxVisiblePages + 1);
+  }
+
+  // Botón "‹"
+  const prevButton = document.getElementById('prev-page');
+  prevButton.disabled = currentPage === 1;
+  prevButton.addEventListener('click', () => {
+    if (currentPage > 1) {
+      currentPage--;
+      cargarAnimes();
     }
+  });
+
+  // Botón "›"
+  const nextButton = document.getElementById('next-page');
+  nextButton.disabled = currentPage === totalPages;
+  nextButton.addEventListener('click', () => {
+    if (currentPage < totalPages) {
+      currentPage++;
+      cargarAnimes();
+    }
+  });
+
+  // Botones de página
+  for (let i = startPage; i <= endPage; i++) {
+    const button = document.createElement('button');
+    button.textContent = i;
+    button.className = `page-number ${i === currentPage ? 'active' : ''}`;
+    button.addEventListener('click', () => {
+      currentPage = i;
+      cargarAnimes();
+    });
+    container.appendChild(button);
   }
 
-  // Ejecutar solo si estamos en la página de catálogo
-  if (document.body.classList.contains('pagina-catalogo')) {
-    console.log('✅ Cargando catálogo...');
-    cargarAnimes();
+  // Añadir "..." si hay más páginas antes o después
+  if (startPage > 1) {
+    const ellipsis = document.createElement('span');
+    ellipsis.textContent = '...';
+    ellipsis.style.margin = '0 0.5rem';
+    container.insertBefore(ellipsis, container.firstChild);
   }
-});
+
+  if (endPage < totalPages) {
+    const ellipsis = document.createElement('span');
+    ellipsis.textContent = '...';
+    ellipsis.style.margin = '0 0.5rem';
+    container.appendChild(ellipsis);
+  }
+}
+
+// Ejecutar solo si estamos en la página de catálogo
+if (document.body.classList.contains('pagina-catalogo')) {
+  console.log('🚀 Cargando catálogo...');
+  cargarAnimes();
+}
