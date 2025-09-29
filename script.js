@@ -13,7 +13,52 @@ document.addEventListener('DOMContentLoaded', () => {
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
   });
 
-  // === BÚSQUEDA ===
+  // === HERO SLIDER ===
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+  const dotsContainer = document.getElementById('sliderDots');
+
+  // Crear puntitos
+  for (let i = 0; i < totalSlides; i++) {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    if (i === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => {
+      currentSlide = i;
+      showSlide(currentSlide);
+      resetInterval();
+    });
+    dotsContainer.appendChild(dot);
+  }
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+
+    const dots = dotsContainer.querySelectorAll('.dot');
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
+    });
+  }
+
+  let slideInterval = setInterval(() => {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showSlide(currentSlide);
+  }, 8000);
+
+  function resetInterval() {
+    clearInterval(slideInterval);
+    slideInterval = setInterval(() => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      showSlide(currentSlide);
+    }, 8000);
+  }
+
+  showSlide(currentSlide);
+
+  // === BUSCADOR ===
   const searchInput = document.getElementById('anime-search');
   const resultsBox = document.getElementById('search-results');
   const animes = [
@@ -45,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
   searchInput.addEventListener('blur', () => {
     setTimeout(() => resultsBox.style.display = 'none', 200);
   });
-
+});
   // === GENERADOR DINÁMICO DE EPISODIOS ===
 const totalEpisodios = 1144;
 const episodiosPorBloque = 25;
