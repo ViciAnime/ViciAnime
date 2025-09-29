@@ -6,7 +6,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 1999,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/o/onepiece.html"
   },
@@ -17,7 +16,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2020,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/j/jujutsukaisen.html"
   },
@@ -28,7 +26,6 @@
     "estado": "finalizado",
     "estadoTexto": "Finalizado",
     "anio": 2013,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/a/aot.html"
   },
@@ -39,7 +36,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2019,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/d/demon-slayer.html"
   },
@@ -50,7 +46,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2016,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/m/mha.html"
   },
@@ -61,7 +56,6 @@
     "estado": "finalizado",
     "estadoTexto": "Finalizado",
     "anio": 2002,
-    "etiqueta": "Clásico",
     "tipo": "Anime",
     "ruta": "animes/n/naruto.html"
   },
@@ -72,7 +66,6 @@
     "estado": "finalizado",
     "estadoTexto": "Finalizado",
     "anio": 1986,
-    "etiqueta": "Clásico",
     "tipo": "Anime",
     "ruta": "animes/d/dragonball.html"
   },
@@ -83,7 +76,6 @@
     "estado": "finalizado",
     "estadoTexto": "Finalizado",
     "anio": 2006,
-    "etiqueta": "Clásico",
     "tipo": "Anime",
     "ruta": "animes/d/deathnote.html"
   },
@@ -94,7 +86,6 @@
     "estado": "finalizado",
     "estadoTexto": "Finalizado",
     "anio": 2004,
-    "etiqueta": "Clásico",
     "tipo": "Anime",
     "ruta": "animes/b/bleach.html"
   },
@@ -105,7 +96,6 @@
     "estado": "finalizado",
     "estadoTexto": "Finalizado",
     "anio": 2009,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/f/fma.html"
   },
@@ -116,7 +106,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2012,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/s/sao.html"
   },
@@ -127,7 +116,6 @@
     "estado": "finalizado",
     "estadoTexto": "Finalizado",
     "anio": 2014,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/t/tokyoghoul.html"
   },
@@ -138,7 +126,6 @@
     "estado": "finalizado",
     "estadoTexto": "Finalizado",
     "anio": 2011,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/h/hunterxhunter.html"
   },
@@ -149,7 +136,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2015,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/o/onepunchman.html"
   },
@@ -160,7 +146,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2015,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/o/overlord.html"
   },
@@ -171,7 +156,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2016,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/r/rezero.html"
   },
@@ -182,7 +166,6 @@
     "estado": "finalizado",
     "estadoTexto": "Finalizado",
     "anio": 2009,
-    "etiqueta": "Clásico",
     "tipo": "Anime",
     "ruta": "animes/f/fairytail.html"
   },
@@ -193,7 +176,6 @@
     "estado": "finalizado",
     "estadoTexto": "Finalizado",
     "anio": 2017,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/b/blackclover.html"
   },
@@ -204,7 +186,6 @@
     "estado": "finalizado",
     "estadoTexto": "Finalizado",
     "anio": 2019,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/p/neverland.html"
   },
@@ -215,7 +196,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2016,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/m/mob.html"
   },
@@ -226,7 +206,6 @@
     "estado": "finalizado",
     "estadoTexto": "Finalizado",
     "anio": 2011,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/s/steinsgate.html"
   },
@@ -237,7 +216,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2019,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/k/kaguya.html"
   },
@@ -248,7 +226,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2019,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/d/drstone.html"
   },
@@ -259,7 +236,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2019,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/s/shieldhero.html"
   },
@@ -270,7 +246,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2019,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/f/fireforce.html"
   },
@@ -281,7 +256,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2022,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/c/chainsawman.html"
   },
@@ -292,7 +266,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2022,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/s/spyfamily.html"
   },
@@ -303,7 +276,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2022,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/m/dressup.html"
   },
@@ -314,7 +286,6 @@
     "estado": "finalizado",
     "estadoTexto": "Finalizado",
     "anio": 2021,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/d/demon-slayer-entertainment.html"
   },
@@ -325,7 +296,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2019,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/v/vinland.html"
   },
@@ -336,7 +306,6 @@
     "estado": "finalizado",
     "estadoTexto": "Finalizado",
     "anio": 2006,
-    "etiqueta": "Clásico",
     "tipo": "Anime",
     "ruta": "animes/g/gintama.html"
   },
@@ -347,7 +316,6 @@
     "estado": "finalizado",
     "estadoTexto": "Finalizado",
     "anio": 2008,
-    "etiqueta": "Clásico",
     "tipo": "Anime",
     "ruta": "animes/t/toradora.html"
   },
@@ -358,7 +326,6 @@
     "estado": "finalizado",
     "estadoTexto": "Finalizado",
     "anio": 2016,
-    "etiqueta": "Popular",
     "tipo": "Película",
     "ruta": "animes/y/yourname.html"
   },
@@ -369,7 +336,6 @@
     "estado": "finalizado",
     "estadoTexto": "Finalizado",
     "anio": 2019,
-    "etiqueta": "Popular",
     "tipo": "Película",
     "ruta": "animes/w/weathering.html"
   },
@@ -380,7 +346,6 @@
     "estado": "finalizado",
     "estadoTexto": "Finalizado",
     "anio": 2001,
-    "etiqueta": "Clásico",
     "tipo": "Película",
     "ruta": "animes/s/spiritedaway.html"
   },
@@ -391,7 +356,6 @@
     "estado": "finalizado",
     "estadoTexto": "Finalizado",
     "anio": 2020,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/a/akudama.html"
   },
@@ -402,7 +366,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2017,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/m/abyss.html"
   },
@@ -413,7 +376,6 @@
     "estado": "finalizado",
     "estadoTexto": "Finalizado",
     "anio": 2014,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/n/ngnl.html"
   },
@@ -424,7 +386,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2014,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/t/magichighschool.html"
   },
@@ -435,7 +396,6 @@
     "estado": "finalizado",
     "estadoTexto": "Finalizado",
     "anio": 2015,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/c/charlotte.html"
   },
@@ -446,7 +406,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2016,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/b/bokuhero.html"
   },
@@ -457,7 +416,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2022,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/o/overlord4.html"
   },
@@ -468,7 +426,6 @@
     "estado": "finalizado",
     "estadoTexto": "Finalizado",
     "anio": 2020,
-    "etiqueta": "Popular",
     "tipo": "Película",
     "ruta": "animes/d/mugen.html"
   },
@@ -479,7 +436,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2020,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/m/mushoku.html"
   },
@@ -490,7 +446,6 @@
     "estado": "finalizado",
     "estadoTexto": "Finalizado",
     "anio": 2020,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/t/godhighschool.html"
   },
@@ -501,7 +456,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2018,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/c/cells.html"
   },
@@ -512,7 +466,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2020,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/d/dorohedoro.html"
   },
@@ -523,7 +476,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2019,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/t/quintuplets.html"
   },
@@ -534,7 +486,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2021,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/k/komi.html"
   },
@@ -545,7 +496,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2020,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/t/immortal.html"
   },
@@ -556,7 +506,6 @@
     "estado": "finalizado",
     "estadoTexto": "Finalizado",
     "anio": 2020,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/t/godhighschool.html"
   },
@@ -567,7 +516,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2020,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/t/misfit.html"
   },
@@ -578,7 +526,6 @@
     "estado": "finalizado",
     "estadoTexto": "Finalizado",
     "anio": 2010,
-    "etiqueta": "Clásico",
     "tipo": "Anime",
     "ruta": "animes/t/worldknows.html"
   },
@@ -589,7 +536,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2019,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/s/shieldhero.html"
   },
@@ -600,7 +546,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2021,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/t/saintmagic.html"
   },
@@ -611,7 +556,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2021,
-    "etiqueta": "Popular",
     "tipo": "Anime",
     "ruta": "animes/t/assassin.html"
   },
@@ -622,7 +566,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2022,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/exorcist.html"
   },
@@ -633,7 +576,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2022,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/dangers.html"
   },
@@ -644,7 +586,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2022,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/samurai.html"
   },
@@ -655,7 +596,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2022,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/saintmagic2.html"
   },
@@ -666,7 +606,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2022,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/misfit2.html"
   },
@@ -677,7 +616,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2022,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/godhighschool2.html"
   },
@@ -688,7 +626,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2023,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/s/shieldhero3.html"
   },
@@ -699,7 +636,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2023,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/immortal3.html"
   },
@@ -710,7 +646,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2022,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/quintuplets3.html"
   },
@@ -721,7 +656,6 @@
     "estado": "finalizado",
     "estadoTexto": "Finalizado",
     "anio": 2013,
-    "etiqueta": "Clásico",
     "tipo": "Anime",
     "ruta": "animes/t/worldknows3.html"
   },
@@ -732,7 +666,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2023,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/godhighschool3.html"
   },
@@ -743,7 +676,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2023,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/misfit3.html"
   },
@@ -754,7 +686,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2023,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/exorcist2.html"
   },
@@ -765,7 +696,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2023,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/dangers2.html"
   },
@@ -776,7 +706,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2023,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/samurai2.html"
   },
@@ -787,7 +716,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2023,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/saintmagic3.html"
   },
@@ -798,7 +726,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2024,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/godhighschool4.html"
   },
@@ -809,7 +736,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2024,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/misfit4.html"
   },
@@ -820,7 +746,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2024,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/s/shieldhero4.html"
   },
@@ -831,7 +756,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2024,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/immortal4.html"
   },
@@ -842,7 +766,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2024,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/quintuplets4.html"
   },
@@ -853,7 +776,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2024,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/worldknows4.html"
   },
@@ -864,7 +786,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2025,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/godhighschool5.html"
   },
@@ -875,7 +796,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2025,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/misfit5.html"
   },
@@ -886,7 +806,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2025,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/s/shieldhero5.html"
   },
@@ -897,7 +816,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2025,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/immortal5.html"
   },
@@ -908,7 +826,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2025,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/quintuplets5.html"
   },
@@ -919,7 +836,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2025,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/worldknows5.html"
   },
@@ -930,7 +846,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2026,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/godhighschool6.html"
   },
@@ -941,7 +856,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2026,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/misfit6.html"
   },
@@ -952,7 +866,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2026,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/s/shieldhero6.html"
   },
@@ -963,7 +876,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2026,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/immortal6.html"
   },
@@ -974,7 +886,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2026,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/quintuplets6.html"
   },
@@ -985,7 +896,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2026,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/worldknows6.html"
   },
@@ -996,7 +906,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2027,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/godhighschool7.html"
   },
@@ -1007,7 +916,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2027,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/misfit7.html"
   },
@@ -1018,7 +926,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2027,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/s/shieldhero7.html"
   },
@@ -1029,7 +936,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2027,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/immortal7.html"
   },
@@ -1040,7 +946,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2027,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/quintuplets7.html"
   },
@@ -1051,7 +956,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2027,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/worldknows7.html"
   },
@@ -1062,7 +966,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2028,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/godhighschool8.html"
   },
@@ -1073,7 +976,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2028,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/misfit8.html"
   },
@@ -1084,7 +986,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2028,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/s/shieldhero8.html"
   },
@@ -1095,7 +996,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2028,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/immortal8.html"
   },
@@ -1106,7 +1006,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2028,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/quintuplets8.html"
   },
@@ -1117,7 +1016,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2028,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/worldknows8.html"
   },
@@ -1128,7 +1026,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2029,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/godhighschool9.html"
   },
@@ -1139,7 +1036,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2029,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/misfit9.html"
   },
@@ -1150,7 +1046,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2029,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/s/shieldhero9.html"
   },
@@ -1161,7 +1056,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2029,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/immortal9.html"
   },
@@ -1172,7 +1066,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2029,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/quintuplets9.html"
   },
@@ -1183,7 +1076,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2029,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/worldknows9.html"
   },
@@ -1194,7 +1086,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2030,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/godhighschool10.html"
   },
@@ -1205,7 +1096,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2030,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/misfit10.html"
   },
@@ -1216,7 +1106,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2030,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/s/shieldhero10.html"
   },
@@ -1227,7 +1116,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2030,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/immortal10.html"
   },
@@ -1238,7 +1126,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2030,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/quintuplets10.html"
   },
@@ -1249,7 +1136,6 @@
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2030,
-    "etiqueta": "Estreno",
     "tipo": "Anime",
     "ruta": "animes/t/worldknows10.html"
   }
