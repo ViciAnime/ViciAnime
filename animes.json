@@ -181,8 +181,8 @@
   },
   {
     "id": 19,
-    "titulo": "assets/imagenes/thepromisedneverland.jpg",
-    "imagen": "assets/imagenes/neverland.jpg",
+    "titulo": "The Promised Neverland",
+    "imagen": "assets/imagenes/thepromisedneverland.jpg",
     "estado": "finalizado",
     "estadoTexto": "Finalizado",
     "anio": 2019,
