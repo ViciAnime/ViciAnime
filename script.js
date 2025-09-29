@@ -14,10 +14,17 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // === HERO SLIDER ===
-  let currentSlide = 0;
+function initSlider() {
   const slides = document.querySelectorAll('.slide');
-  const totalSlides = slides.length;
   const dotsContainer = document.getElementById('sliderDots');
+  
+  if (slides.length === 0 || !dotsContainer) return; // salir si no hay slider
+
+  let currentSlide = 0;
+  const totalSlides = slides.length;
+
+  // Limpiar contenedor (por si se llama dos veces)
+  dotsContainer.innerHTML = '';
 
   // Crear puntitos
   for (let i = 0; i < totalSlides; i++) {
@@ -57,7 +64,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   showSlide(currentSlide);
+}
 
+// Ejecutar cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', () => {
+  // ... tu código de header y buscador ...
+
+  // Iniciar el slider
+  initSlider();
+});
+  
   // === BUSCADOR ===
   const searchInput = document.getElementById('anime-search');
   const resultsBox = document.getElementById('search-results');
