@@ -235,8 +235,8 @@ a {
 /* === CAPÍTULOS RECIENTES === */
 .catalogo {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(7, 1fr); /* ✅ 7 columnas fijas */
+  gap: 1rem;
   padding: 2rem 1rem 3rem;
 }
 
