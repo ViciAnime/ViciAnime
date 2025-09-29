@@ -401,13 +401,13 @@
   },
   {
     "id": 41,
-    "titulo": "Boku no Hero Academia",
-    "imagen": "assets/imagenes/bokuhero.jpg",
-    "estado": "en-emision",
+    "titulo": "Sozai Saishuka no Isekai Ryokouki",
+    "imagen": "https://animeflv.net/uploads/animes/covers/4229.jpg",
+    "estado": "en-emisión",
     "estadoTexto": "En emisión",
-    "anio": 2016,
+    "anio": 2025,
     "tipo": "Anime",
-    "ruta": "animes/b/bokuhero.html"
+    "ruta": "animes/s/sozaisaishukanoisekairyokouki.html",
   },
   {
     "id": 42,
