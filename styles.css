@@ -829,3 +829,54 @@ body:not(.pagina-anime):not(.pagina-index) {
 .estado.rojo {
   color: #E53935;
 }
+
+/* === PAGINACIÓN === */
+.paginacion-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.pag-btn {
+  background-color: #1a1a2e;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.pag-btn:hover {
+  background-color: #2a2a3e;
+}
+
+.pag-btn.active {
+  background-color: #00c853; /* verde brillante */
+  color: black;
+  font-weight: bold;
+}
+
+.page-number {
+  background-color: #1a1a2e;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.page-number:hover {
+  background-color: #2a2a3e;
+}
+
+.page-number.active {
+  background-color: #00c853;
+  color: black;
+  font-weight: bold;
+}
