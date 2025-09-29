@@ -212,3 +212,47 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
+
+// === CARGA DINÁMICA DE ANIMES ===
+async function cargarAnimes() {
+  try {
+    const response = await fetch('animes.json');
+    const animes = await response.json();
+    const contenedor = document.getElementById('catalogo');
+
+    if (!contenedor) return;
+
+    contenedor.innerHTML = '';
+
+    animes.forEach(anime => {
+      const tarjeta = document.createElement('a');
+      tarjeta.href = anime.ruta;
+      tarjeta.className = 'anime-card-link';
+
+      tarjeta.innerHTML = `
+        <div class="anime-card">
+          <div style="position: relative;">
+            <img src="${anime.imagen}" alt="${anime.titulo}" />
+            ${anime.etiqueta ? `<span class="etiqueta-estreno">${anime.etiqueta}</span>` : ''}
+          </div>
+          <div class="card-info">
+            <h3>${anime.titulo}</h3>
+            <div>
+              <span class="tipo">${anime.tipo}</span>
+              <span class="estado ${anime.estado}">${anime.anio} - ${anime.estadoTexto}</span>
+            </div>
+          </div>
+        </div>
+      `;
+
+      contenedor.appendChild(tarjeta);
+    });
+  } catch (error) {
+    console.error('Error al cargar los animes:', error);
+  }
+}
+
+// Ejecutar solo si estamos en la página de catálogo
+if (document.body.classList.contains('pagina-catalogo')) {
+  cargarAnimes();
+}
