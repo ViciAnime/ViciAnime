@@ -402,12 +402,12 @@
   {
     "id": 41,
     "titulo": "Sozai Saishuka no Isekai Ryokouki",
-    "imagen": "assets/imagenes/charlotte.jpg",
+    "imagen": "https://animeflv.net/uploads/animes/covers/4229.jpg",
     "estado": "en-emisión",
     "estadoTexto": "En emisión",
     "anio": 2025,
     "tipo": "Anime",
-    "ruta": "animes/s/sozaisaishukanoisekairyokouki.html",
+    "ruta": "animes/s/sozaisaishukanoisekairyokouki.html"
   },
   {
     "id": 42,
