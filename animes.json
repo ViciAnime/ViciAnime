@@ -92,7 +92,7 @@
   {
     "id": 10,
     "titulo": "Fullmetal Alchemist: Brotherhood",
-    "imagen": "assets/imagenes/fma.jpg",
+    "imagen": "assets/imagenes/fmab.jpg",
     "estado": "finalizado",
     "estadoTexto": "Finalizado",
     "anio": 2009,
@@ -102,7 +102,7 @@
   {
     "id": 11,
     "titulo": "Sword Art Online",
-    "imagen": "assets/imagenes/sao.jpg",
+    "imagen": "assets/imagenes/swo.jpeg",
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2012,
@@ -122,7 +122,7 @@
   {
     "id": 13,
     "titulo": "Hunter x Hunter",
-    "imagen": "assets/imagenes/hunterxhunter.jpg",
+    "imagen": "assets/imagenes/hxh.jpg",
     "estado": "finalizado",
     "estadoTexto": "Finalizado",
     "anio": 2011,
@@ -132,7 +132,7 @@
   {
     "id": 14,
     "titulo": "One Punch Man",
-    "imagen": "assets/imagenes/onepunchman.jpg",
+    "imagen": "assets/imagenes/opm.jpg",
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2015,
@@ -152,7 +152,7 @@
   {
     "id": 16,
     "titulo": "Re:Zero",
-    "imagen": "assets/imagenes/rezero.jpg",
+    "imagen": "assets/imagenes/rezero.webp",
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2016,
@@ -181,7 +181,7 @@
   },
   {
     "id": 19,
-    "titulo": "The Promised Neverland",
+    "titulo": "assets/imagenes/thepromisedneverland.jpg",
     "imagen": "assets/imagenes/neverland.jpg",
     "estado": "finalizado",
     "estadoTexto": "Finalizado",
@@ -192,7 +192,7 @@
   {
     "id": 20,
     "titulo": "Mob Psycho 100",
-    "imagen": "assets/imagenes/mob.jpg",
+    "imagen": "assets/imagenes/mobpsycho100.jpg",
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2016,
@@ -202,7 +202,7 @@
   {
     "id": 21,
     "titulo": "Steins;Gate",
-    "imagen": "assets/imagenes/steinsgate.jpg",
+    "imagen": "assets/imagenes/stainsgate.jpg",
     "estado": "finalizado",
     "estadoTexto": "Finalizado",
     "anio": 2011,
@@ -212,7 +212,7 @@
   {
     "id": 22,
     "titulo": "Kaguya-sama: Love is War",
-    "imagen": "assets/imagenes/kaguya.jpg",
+    "imagen": "assets/imagenes/kaguyasamaloveiswar.webp",
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2019,
@@ -232,7 +232,7 @@
   {
     "id": 24,
     "titulo": "The Rising of the Shield Hero",
-    "imagen": "assets/imagenes/shieldhero.jpg",
+    "imagen": "assets/imagenes/therisingoftheshieldhero.jpg",
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2019,
@@ -242,7 +242,7 @@
   {
     "id": 25,
     "titulo": "Fire Force",
-    "imagen": "assets/imagenes/fireforce.jpg",
+    "imagen": "assets/imagenes/fireforce1.jpeg",
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2019,
@@ -262,7 +262,7 @@
   {
     "id": 27,
     "titulo": "Spy x Family",
-    "imagen": "assets/imagenes/spyfamily.jpg",
+    "imagen": "assets/imagenes/spyxfamily.jpg",
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2022,
@@ -272,7 +272,7 @@
   {
     "id": 28,
     "titulo": "My Dress-Up Darling",
-    "imagen": "assets/imagenes/dressup.jpg",
+    "imagen": "assets/imagenes/mydressupdarling.webp",
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2022,
