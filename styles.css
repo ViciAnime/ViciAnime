@@ -240,7 +240,7 @@ a:hover {
   transform: translateX(-50%);
   display: flex;
   gap: 10px;
-  z-index: 10;
+  z-index: 20;
 }
 
 .dot {
@@ -250,6 +250,7 @@ a:hover {
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.3s;
+  border: 2px solid transparent; /* mejora la visibilidad */
 }
 
 .dot.active {
