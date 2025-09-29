@@ -15,15 +15,20 @@ body {
   padding: 0 3rem; /* margen izquierdo y derecho */
 }
 
-/* === ESPACIO PARA HEADER FIJO (todas las páginas) === */
-body:not(.pagina-anime) {
-  padding-top: 100px; /* altura del header + margen */
+/* === PÁGINAS CON PADDING PARA HEADER === */
+body:not(.pagina-anime):not(.pagina-index) {
+  padding-top: 100px;
 }
 
 /* === PÁGINA INDIVIDUAL DE ANIME === */
 body.pagina-anime {
   background-color: #0d0d0d;
   padding-top: 100px; /* también necesita espacio para el header */
+}
+
+/* === PÁGINA INDEX (sin padding arriba) === */
+body.pagina-index {
+  padding-top: 0;
 }
 
 .text-brillante {
@@ -151,6 +156,7 @@ a:hover {
   overflow: hidden;
   margin-left: calc(-3rem); /* compensa el padding del body */
   margin-right: calc(-3rem);
+  z-index: 0;
 }
 
 .slide {
