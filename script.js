@@ -213,46 +213,69 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// === CARGA DINÁMICA DE ANIMES ===
-async function cargarAnimes() {
-  try {
-    const response = await fetch('animes.json');
-    const animes = await response.json();
-    const contenedor = document.getElementById('catalogo');
+document.addEventListener('DOMContentLoaded', () => {
+  // === HEADER SCROLL BEHAVIOR ===
+  const header = document.querySelector('header');
+  if (header) {
+    let lastScrollTop = 0;
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop && scrollTop > 100) {
+        header.classList.add('hide-header');
+      } else {
+        header.classList.remove('hide-header');
+      }
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+  }
 
-    if (!contenedor) return;
+  // === CARGA DINÁMICA DE ANIMES ===
+  async function cargarAnimes() {
+    try {
+      const response = await fetch('animes.json');
+      if (!response.ok) throw new Error('No se pudo cargar animes.json');
+      const animes = await response.json();
+      const contenedor = document.getElementById('catalogo');
 
-    contenedor.innerHTML = '';
+      if (!contenedor) {
+        console.error('❌ No se encontró el contenedor #catalogo');
+        return;
+      }
 
-    animes.forEach(anime => {
-      const tarjeta = document.createElement('a');
-      tarjeta.href = anime.ruta;
-      tarjeta.className = 'anime-card-link';
+      contenedor.innerHTML = '';
 
-      tarjeta.innerHTML = `
-        <div class="anime-card">
-          <div style="position: relative;">
-            <img src="${anime.imagen}" alt="${anime.titulo}" />
-            ${anime.etiqueta ? `<span class="etiqueta-estreno">${anime.etiqueta}</span>` : ''}
-          </div>
-          <div class="card-info">
-            <h3>${anime.titulo}</h3>
-            <div>
-              <span class="tipo">${anime.tipo}</span>
-              <span class="estado ${anime.estado}">${anime.anio} - ${anime.estadoTexto}</span>
+      animes.forEach(anime => {
+        const tarjeta = document.createElement('a');
+        tarjeta.href = anime.ruta;
+        tarjeta.className = 'anime-card-link';
+
+        tarjeta.innerHTML = `
+          <div class="anime-card">
+            <div style="position: relative;">
+              <img src="${anime.imagen}" alt="${anime.titulo}" />
+              ${anime.etiqueta ? `<span class="etiqueta-estreno">${anime.etiqueta}</span>` : ''}
+            </div>
+            <div class="card-info">
+              <h3>${anime.titulo}</h3>
+              <div>
+                <span class="tipo">${anime.tipo}</span>
+                <span class="estado ${anime.estado}">${anime.anio} - ${anime.estadoTexto}</span>
+              </div>
             </div>
           </div>
-        </div>
-      `;
+        `;
 
-      contenedor.appendChild(tarjeta);
-    });
-  } catch (error) {
-    console.error('Error al cargar los animes:', error);
+        contenedor.appendChild(tarjeta);
+      });
+    } catch (error) {
+      console.error('❌ Error al cargar los animes:', error);
+      document.getElementById('catalogo').innerHTML = `<p style="color: red; text-align: center;">Error: ${error.message}</p>`;
+    }
   }
-}
 
-// Ejecutar solo si estamos en la página de catálogo
-if (document.body.classList.contains('pagina-catalogo')) {
-  cargarAnimes();
-}
+  // Ejecutar solo si estamos en la página de catálogo
+  if (document.body.classList.contains('pagina-catalogo')) {
+    console.log('✅ Cargando catálogo...');
+    cargarAnimes();
+  }
+});
