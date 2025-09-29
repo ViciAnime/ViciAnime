@@ -32,7 +32,7 @@
   {
     "id": 4,
     "titulo": "Demon Slayer",
-    "imagen": "assets/imagenes/demon-slayer.jpg",
+    "imagen": "assets/imagenes/demonslayer.jpeg",
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2019,
@@ -42,7 +42,7 @@
   {
     "id": 5,
     "titulo": "My Hero Academia",
-    "imagen": "assets/imagenes/mha.jpg",
+    "imagen": "assets/imagenes/mha.webp",
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 2016,
@@ -52,7 +52,7 @@
   {
     "id": 6,
     "titulo": "Naruto",
-    "imagen": "assets/imagenes/naruto.jpg",
+    "imagen": "assets/imagenes/naruto.jpeg",
     "estado": "finalizado",
     "estadoTexto": "Finalizado",
     "anio": 2002,
@@ -62,7 +62,7 @@
   {
     "id": 7,
     "titulo": "Dragon Ball",
-    "imagen": "assets/imagenes/dragonball.jpg",
+    "imagen": "assets/imagenes/dragonball.webp",
     "estado": "finalizado",
     "estadoTexto": "Finalizado",
     "anio": 1986,
