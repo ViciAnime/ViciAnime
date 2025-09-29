@@ -591,3 +591,151 @@ a {
   text-align: center;
   z-index: 2;
 }
+
+/* === ESPACIO PARA HEADER EN CATÁLOGO === */
+body:not(.pagina-anime):not(.pagina-index) {
+  padding-top: 100px;
+}
+
+/* === TÍTULO DEL CATÁLOGO === */
+.titulo-catalogo {
+  text-align: center;
+  font-size: 2.2rem;
+  margin: 1rem 0 1.5rem;
+  color: #85E330;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* === FILTROS (derecha) === */
+.filtros-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.filtro-btn {
+  background-color: #1a1a2e;
+  border: none;
+  color: white;
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.filtro-btn:hover {
+  background-color: #2a2a3e;
+}
+
+.filtro-btn .arrow {
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+.filtrar-btn {
+  background-color: #85E330;
+  color: #000;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.filtrar-btn:hover {
+  background-color: #70c820;
+}
+
+/* === TARJETAS DE ANIME (tamaño fijo) === */
+.anime-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.anime-card {
+  background-color: #1a1a2e;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 200px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.anime-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #6240ED;
+}
+
+.anime-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.anime-card .content {
+  padding: 0.6rem 0.4rem 0.2rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.anime-card h3 {
+  font-size: 1.1rem;
+  color: #fff;
+  margin: 0;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* === ESTADO === */
+.estado {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+  align-self: flex-start;
+}
+
+.estado.verde {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.estado.rojo {
+  background-color: #E53935;
+  color: white;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .filtros-container {
+    justify-content: center;
+  }
+
+  .filtro-btn,
+  .filtrar-btn {
+    width: auto;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+  }
+}
