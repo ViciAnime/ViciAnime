@@ -2,7 +2,7 @@
   {
     "id": 1,
     "titulo": "One Piece",
-    "imagen": "assets/imagenes/onepiece.webp",
+    "imagen": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101926-LRzUk7fQcX3K.jpg",
     "estado": "en-emision",
     "estadoTexto": "En emisión",
     "anio": 1999,
