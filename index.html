@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ViciAnime</title>
   <meta name="description" content="Catálogo de anime online con buscador, filtros y fichas visuales. Inspirado en AnimeFLV, TioAnime y Katanime." />
   <meta name="keywords" content="anime, ver anime, catálogo anime, naruto, one piece, dragon ball, animeflv, tioanime, katanime" />
@@ -10,40 +10,41 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="pagina-index">
   <header>
-  <div class="header-content">
-    <div class="logo">
-  <a href="index.html">
-    <img src="assets/imagenes/Anime-removebg-preview.png" alt="ViciAnime Logo" />
-  </a>
-</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="catalogo.html">Catálogo</a></li>
-        <li><a href="calendario.html">Calendario</a></li>
-        <li><a href="perfil.html">Perfil</a></li>
-      </ul>
-    </nav>
-    <div class="search-box">
-      <input type="text" id="anime-search" placeholder="Buscar anime..." />
-      <ul id="search-results"></ul>
+    <div class="header-content">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/imagenes/Anime-removebg-preview.png" alt="ViciAnime Logo" />
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="calendario.html">Calendario</a></li>
+          <li><a href="perfil.html">Perfil</a></li>
+        </ul>
+      </nav>
+      <div class="search-box">
+        <input type="text" id="anime-search" placeholder="Buscar anime..." />
+        <ul id="search-results"></ul>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
+  <!-- HERO SLIDER -->
   <section class="hero-slider">
     <div class="slide active" style="background-image: url('assets/imagenes/gachiakuta.jpg');">
       <div class="overlay">
         <h1>Gachiakuta</h1>
-        <p>Rudo y su padre adoptivo, Regto, viven en los barrios bajos de una ciudad rica e intentan convivir con el resto de los habitantes, pero Rudo desprecia el derroche de la clase alta...</p>
+        <p>Rudo y su padre adoptivo, Regto, viven en los barrios bajos de una ciudad rica e intentan convivir con el resto de los habitantes...</p>
         <div class="tags">
           <span>Acción</span>
           <span>Fantasía</span>
           <span>Shōnen</span>
         </div>
-        <a href="#" class="ver-btn">Ver ahora</a>
+        <a href="animes/g/gachiakuta.html" class="ver-btn">Ver ahora</a>
       </div>
     </div>
 
@@ -56,7 +57,7 @@
           <span>Sobrenatural</span>
           <span>Shōnen</span>
         </div>
-        <a href="#" class="ver-btn">Ver ahora</a>
+        <a href="animes/j/jujutsukaisen.html" class="ver-btn">Ver ahora</a>
       </div>
     </div>
 
@@ -76,30 +77,30 @@
     <div class="slider-dots" id="sliderDots"></div>
   </section>
 
-<section class="catalogo" id="catalogo">
-  <h2 style="grid-column: 1 / -1; font-size: 2rem; color: #85E330; margin-bottom: 1rem;">
-    📺 Capítulos Recientes
-  </h2>
+  <!-- CAPÍTULOS RECIENTES -->
+  <section class="catalogo" id="catalogo">
+    <h2 style="grid-column: 1 / -1; font-size: 2rem; color: #85E330; margin-bottom: 1rem;">
+      📺 Capítulos Recientes
+    </h2>
 
-  <a href="https://vicianime.com/ametokimito" target="_blank" class="chapter-card">
-    <div class="chapter-image">
-      <img src="assets/imagenes/videoframe_467505.png" alt="Ame to Kimi to - Capítulo 12" />
-      <span class="chapter-number">Capítulo 12</span>
-    </div>
-    <div class="chapter-info">
-      <h3 class="chapter-anime">Ame to Kimi to</h3>
-      <span class="chapter-type">Anime</span>
-      <span class="timeago" datetime="2025-09-20T18:29:56">Hace X</span>
-    </div>
-  </a>
-</section>
+    <a href="https://vicianime.com/ametokimito" target="_blank" class="chapter-card">
+      <div class="chapter-image">
+        <img src="assets/imagenes/videoframe_467505.png" alt="Ame to Kimi to - Capítulo 12" />
+        <span class="chapter-number">Capítulo 12</span>
+      </div>
+      <div class="chapter-info">
+        <h3 class="chapter-anime">Ame to Kimi to</h3>
+        <span class="chapter-type">Anime</span>
+        <span class="timeago" datetime="2025-09-20T18:29:56">Hace X</span>
+      </div>
+    </a>
+  </section>
 
-  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
-<script>
-  timeago.render(document.querySelectorAll('.timeago'));
-</script>
-
-<script src="script.js"></script>
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
+  <script>
+    timeago.render(document.querySelectorAll('.timeago'));
+  </script>
+  <script src="script.js"></script>
 </body>
 </html>
