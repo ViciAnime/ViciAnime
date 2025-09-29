@@ -1,17 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
   // === HEADER SCROLL BEHAVIOR ===
-  let lastScrollTop = 0;
   const header = document.querySelector('header');
-
-  window.addEventListener('scroll', () => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollTop > lastScrollTop && scrollTop > 100) {
-      header.classList.add('hide-header');
-    } else {
-      header.classList.remove('hide-header');
-    }
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-  });
+  if (header) {
+    let lastScrollTop = 0;
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop && scrollTop > 100) {
+        header.classList.add('hide-header');
+      } else {
+        header.classList.remove('hide-header');
+      }
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+  }
 
   // === HERO SLIDER ===
   const slides = document.querySelectorAll('.slide');
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (slides.length > 0 && dotsContainer) {
     let currentSlide = 0;
     const totalSlides = slides.length;
+    let slideInterval;
 
     // Crear puntitos
     for (let i = 0; i < totalSlides; i++) {
@@ -45,20 +47,20 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    let slideInterval = setInterval(() => {
-      currentSlide = (currentSlide + 1) % totalSlides;
-      showSlide(currentSlide);
-    }, 8000);
-
-    function resetInterval() {
-      clearInterval(slideInterval);
+    function startSlider() {
       slideInterval = setInterval(() => {
         currentSlide = (currentSlide + 1) % totalSlides;
         showSlide(currentSlide);
       }, 8000);
     }
 
+    function resetInterval() {
+      clearInterval(slideInterval);
+      startSlider();
+    }
+
     showSlide(currentSlide);
+    startSlider();
   }
 
   // === BUSCADOR ===
@@ -72,17 +74,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (searchInput && resultsBox) {
     searchInput.addEventListener('input', () => {
-      const query = searchInput.value.toLowerCase();
+      const query = searchInput.value.toLowerCase().trim();
       resultsBox.innerHTML = '';
+      
       if (query.length === 0) {
         resultsBox.style.display = 'none';
         return;
       }
-      const filtered = animes.filter(anime => anime.toLowerCase().includes(query));
+
+      const filtered = animes.filter(anime => 
+        anime.toLowerCase().includes(query)
+      );
+
       if (filtered.length > 0) {
         filtered.forEach(anime => {
           const li = document.createElement('li');
           li.textContent = anime;
+          li.addEventListener('click', () => {
+            searchInput.value = anime;
+            resultsBox.style.display = 'none';
+          });
           resultsBox.appendChild(li);
         });
         resultsBox.style.display = 'block';
@@ -92,11 +103,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     searchInput.addEventListener('blur', () => {
-      setTimeout(() => resultsBox.style.display = 'none', 200);
+      setTimeout(() => {
+        resultsBox.style.display = 'none';
+      }, 200);
     });
   }
 
-  // === GENERADOR DINÁMICO DE EPISODIOS (solo si estamos en una página de anime) ===
+  // === GENERADOR DINÁMICO DE EPISODIOS ===
   const contenedorEpisodios = document.getElementById('contenedor-episodios');
   const selectBloque = document.getElementById('rango-episodios');
 
@@ -107,7 +120,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function generarEpisodios(bloqueNumero) {
       contenedorEpisodios.innerHTML = '';
       const inicio = (bloqueNumero - 1) * episodiosPorBloque + 1;
-      const fin = bloqueNumero === 46 ? totalEpisodios : Math.min(bloqueNumero * episodiosPorBloque, totalEpisodios);
+      const fin = bloqueNumero === 46 
+        ? totalEpisodios 
+        : Math.min(bloqueNumero * episodiosPorBloque, totalEpisodios);
 
       for (let i = inicio; i <= fin; i++) {
         const episodio = document.createElement('div');
@@ -122,6 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
+    // Inicializar primer bloque
     generarEpisodios(1);
 
     selectBloque.addEventListener('change', (e) => {
@@ -160,17 +176,39 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     };
 
-    const contenedorSimilares = document.querySelector('.similar-animes ul');
+    // Buscar primer género coincidente
     let animesParaMostrar = [];
-
     generos.forEach(gen => {
-      const clave = quitarTildes(gen.textContent.trim().toLowerCase());
+      const texto = gen.textContent.trim();
+      const clave = quitarTildes(texto.toLowerCase());
       if (similares[clave] && animesParaMostrar.length === 0) {
         animesParaMostrar = similares[clave];
       }
     });
 
+    // Renderizar en el contenedor
+    const contenedorSimilares = document.querySelector('.similar-animes');
     if (contenedorSimilares && animesParaMostrar.length > 0) {
+      // Limpiar contenido existente (excepto el título)
+      const titulo = contenedorSimilares.querySelector('h3');
       contenedorSimilares.innerHTML = '';
+      if (titulo) contenedorSimilares.appendChild(titulo);
+
+      // Añadir tarjetas
       animesParaMostrar.forEach(anime => {
-       
+        const card = document.createElement('div');
+        card.className = 'anime-card';
+        card.innerHTML = `
+          <a href="${anime.enlace}">
+            <img src="assets/imagenes/placeholder.jpg" alt="${anime.nombre}" />
+            <div class="anime-info">
+              <span class="anime-title">${anime.nombre}</span>
+              <span class="anime-meta">2023 - En emisión</span>
+            </div>
+          </a>
+        `;
+        contenedorSimilares.appendChild(card);
+      });
+    }
+  }
+});
