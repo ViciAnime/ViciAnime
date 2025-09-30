@@ -293,7 +293,7 @@ async function buscarEnJikan(titulo) {
     if (data.data && data.data.length > 0) {
       const anime = data.data[0];
       return {
-        imagen: anime.images.jpg.image_url || 'assets/imagenes/placeholder.jpg',
+        imagen: anime.images.jpg.image_url || 'assets/imagenes/imageonline-co-placeholder-image.jpg',
         tipo: anime.type || 'Anime',
         anio: anime.year || '----',
         estado: anime.status === 'Currently Airing' ? 'verde' : 'rojo',
