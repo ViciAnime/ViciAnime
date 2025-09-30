@@ -302,72 +302,158 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  let currentPage = 1;
-  const itemsPerPage = 21; // 3 filas × 7 animes
+  // === CARGA DINÁMICA DE ANIMES CON PAGINACIÓN CORREGIDA ===
+let currentPage = 1;
+const itemsPerPage = 21; // 3 filas × 7 animes
 
-  function renderizarPaginacion(totalPages) {
-    const container = document.getElementById('page-buttons');
-    container.innerHTML = '';
+// === FUNCIÓN PARA BUSCAR IMAGEN EN JIKAN ===
+async function buscarImagenEnJikan(titulo) {
+  try {
+    const response = await fetch(
+      `https://api.jikan.moe/v4/anime?q=${encodeURIComponent(titulo)}&limit=1`
+    );
+    const data = await response.json();
 
-    const maxVisiblePages = 7;
-    let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
-    let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
-
-    if (endPage - startPage + 1 < maxVisiblePages) {
-      startPage = Math.max(1, endPage - maxVisiblePages + 1);
+    if (data.data && data.data.length > 0) {
+      return data.data[0].images.jpg.image_url;
     }
-
-    // Botón "‹"
-    const prevButton = document.getElementById('prev-page');
-    prevButton.disabled = currentPage === 1;
-    prevButton.addEventListener('click', () => {
-      if (currentPage > 1) {
-        currentPage--;
-        cargarAnimes();
-      }
-    });
-
-    // Botón "›"
-    const nextButton = document.getElementById('next-page');
-    nextButton.disabled = currentPage === totalPages;
-    nextButton.addEventListener('click', () => {
-      if (currentPage < totalPages) {
-        currentPage++;
-        cargarAnimes();
-      }
-    });
-
-    // Botones de página
-    for (let i = startPage; i <= endPage; i++) {
-      const button = document.createElement('button');
-      button.textContent = i;
-      button.className = `page-number ${i === currentPage ? 'active' : ''}`;
-      button.addEventListener('click', () => {
-        currentPage = i;
-        cargarAnimes();
-      });
-      container.appendChild(button);
-    }
-
-    // Añadir "..." si hay más páginas antes o después
-    if (startPage > 1) {
-      const ellipsis = document.createElement('span');
-      ellipsis.textContent = '...';
-      ellipsis.style.margin = '0 0.5rem';
-      container.insertBefore(ellipsis, container.firstChild);
-    }
-
-    if (endPage < totalPages) {
-      const ellipsis = document.createElement('span');
-      ellipsis.textContent = '...';
-      ellipsis.style.margin = '0 0.5rem';
-      container.appendChild(ellipsis);
-    }
+  } catch (error) {
+    console.warn(`⚠️ No se encontró imagen para "${titulo}"`);
   }
 
-  // Ejecutar solo si estamos en la página de catálogo
-  if (document.body.classList.contains('pagina-catalogo')) {
-    console.log('🚀 Cargando catálogo...');
-    cargarAnimes();
+  // Imagen por defecto si no se encuentra
+  return 'assets/imagenes/placeholder.jpg';
+}
+
+// === CARGAR CATÁLOGO CORREGIDO ===
+async function cargarCatalogo(pagina = 1) {
+  try {
+    console.log(`🔍 Cargando página ${pagina}...`);
+    const response = await fetch('animes.json');
+    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+    const animes = await response.json();
+    const totalPages = Math.ceil(animes.length / itemsPerPage);
+
+    // Calcular rango de animes para esta página
+    const startIndex = (pagina - 1) * itemsPerPage;
+    const endIndex = Math.min(startIndex + itemsPerPage, animes.length);
+    const animesPagina = animes.slice(startIndex, endIndex);
+
+    // Renderizar animes
+    const contenedor = document.getElementById('catalogo');
+    contenedor.innerHTML = '';
+
+    // Procesar cada anime con imagen de Jikan
+    for (const anime of animesPagina) {
+      let imagenUrl = anime.imagen;
+
+      // Si no tiene imagen local o es placeholder, buscar en Jikan
+      if (!imagenUrl || imagenUrl.includes('placeholder') || imagenUrl.includes('assets/')) {
+        imagenUrl = await buscarImagenEnJikan(anime.titulo);
+      }
+
+      const tarjeta = document.createElement('a');
+      tarjeta.href = anime.ruta;
+      tarjeta.className = 'anime-card-link';
+
+      tarjeta.innerHTML = `
+        <div class="anime-card">
+          <div style="position: relative;">
+            <img src="${imagenUrl}" alt="${anime.titulo}" loading="lazy" />
+            ${anime.etiqueta ? `<span class="etiqueta-estreno">${anime.etiqueta}</span>` : ''}
+          </div>
+          <div class="card-info">
+            <h3>${anime.titulo}</h3>
+            <div>
+              <span class="tipo">${anime.tipo}</span>
+              <span class="estado ${anime.estado}">${anime.anio} - ${anime.estadoTexto}</span>
+            </div>
+          </div>
+        </div>
+      `;
+
+      contenedor.appendChild(tarjeta);
+    }
+
+    // Actualizar paginación
+    renderizarPaginacion(totalPages, pagina);
+
+  } catch (error) {
+    console.error('❌ Error al cargar los animes:', error);
+    document.getElementById('catalogo').innerHTML = `
+      <p style="color: red; text-align: center;">
+        Error al cargar los animes: ${error.message}
+      </p>
+    `;
   }
-});
+}
+
+// === RENDERIZAR PAGINACIÓN CORREGIDA ===
+function renderizarPaginacion(totalPages, paginaActual) {
+  const container = document.getElementById('page-buttons');
+  container.innerHTML = '';
+
+  const maxVisiblePages = 7;
+  let startPage = Math.max(1, paginaActual - Math.floor(maxVisiblePages / 2));
+  let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+
+  if (endPage - startPage + 1 < maxVisiblePages) {
+    startPage = Math.max(1, endPage - maxVisiblePages + 1);
+  }
+
+  // Botón "‹"
+  const prevButton = document.getElementById('prev-page');
+  prevButton.disabled = paginaActual === 1;
+  prevButton.onclick = () => {
+    if (paginaActual > 1) {
+      currentPage = paginaActual - 1;
+      cargarCatalogo(currentPage);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  // Botón "›"
+  const nextButton = document.getElementById('next-page');
+  nextButton.disabled = paginaActual === totalPages;
+  nextButton.onclick = () => {
+    if (paginaActual < totalPages) {
+      currentPage = paginaActual + 1;
+      cargarCatalogo(currentPage);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  // Botones de página
+  for (let i = startPage; i <= endPage; i++) {
+    const button = document.createElement('button');
+    button.textContent = i;
+    button.className = `page-number ${i === paginaActual ? 'active' : ''}`;
+    button.onclick = () => {
+      currentPage = i;
+      cargarCatalogo(currentPage);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+    container.appendChild(button);
+  }
+
+  // Añadir "..." si hay más páginas
+  if (startPage > 1) {
+    const ellipsis = document.createElement('span');
+    ellipsis.textContent = '...';
+    ellipsis.style.margin = '0 0.5rem';
+    container.insertBefore(ellipsis, container.firstChild);
+  }
+
+  if (endPage < totalPages) {
+    const ellipsis = document.createElement('span');
+    ellipsis.textContent = '...';
+    ellipsis.style.margin = '0 0.5rem';
+    container.appendChild(ellipsis);
+  }
+}
+
+// Ejecutar solo si estamos en la página de catálogo
+if (document.body.classList.contains('pagina-catalogo')) {
+  console.log('🚀 Cargando catálogo...');
+  cargarCatalogo(currentPage);
+}
