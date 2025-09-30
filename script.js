@@ -232,7 +232,7 @@ async function buscarImagenEnJikan(titulo) {
   }
 
   // Imagen por defecto si no se encuentra
-  return 'assets/imagenes/placeholder.jpg';
+  return 'assets/imagenes/imageonline-co-placeholder-image.jpg';
 }
 
 // === CARGA DINÁMICA DE ANIMES CON PAGINACIÓN Y JIKAN ===
