@@ -217,68 +217,103 @@ document.addEventListener('DOMContentLoaded', () => {
   const itemsPerPage = 21; // 3 filas × 7 animes
 
   async function cargarAnimes() {
-    try {
-      console.log('🔍 Intentando cargar animes.json...');
-      const response = await fetch('animes.json');
-      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-      console.log('✅ animes.json cargado correctamente');
-      const animes = await response.json();
-      console.log(`📊 Total de animes: ${animes.length}`);
+  try {
+    console.log('🔍 Intentando cargar animes.json...');
+    const response = await fetch('animes.json');
+    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+    console.log('✅ animes.json cargado correctamente');
+    const animes = await response.json();
+    console.log(`📊 Total de animes: ${animes.length}`);
 
-      const contenedor = document.getElementById('catalogo');
-      const pageButtonsContainer = document.getElementById('page-buttons');
+    const contenedor = document.getElementById('catalogo');
+    const pageButtonsContainer = document.getElementById('page-buttons');
 
-      if (!contenedor || !pageButtonsContainer) {
-        console.error('❌ No se encontró el contenedor #catalogo o #page-buttons');
-        return;
-      }
+    if (!contenedor || !pageButtonsContainer) {
+      console.error('❌ No se encontró el contenedor #catalogo o #page-buttons');
+      return;
+    }
 
-      // Calcular total de páginas
-      const totalPages = Math.ceil(animes.length / itemsPerPage);
+    // Calcular total de páginas
+    const totalPages = Math.ceil(animes.length / itemsPerPage);
 
-      // Renderizar animes de la página actual
-      const startIndex = (currentPage - 1) * itemsPerPage;
-      const endIndex = Math.min(startIndex + itemsPerPage, animes.length);
-      const animesPagina = animes.slice(startIndex, endIndex);
+    // Renderizar animes de la página actual
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = Math.min(startIndex + itemsPerPage, animes.length);
+    const animesPagina = animes.slice(startIndex, endIndex);
 
-      contenedor.innerHTML = '';
+    contenedor.innerHTML = '';
 
-      animesPagina.forEach(anime => {
-        const tarjeta = document.createElement('a');
-        tarjeta.href = anime.ruta;
-        tarjeta.className = 'anime-card-link';
+    for (const anime of animesPagina) {
+      const datos = await buscarEnJikan(anime.titulo);
 
-        tarjeta.innerHTML = `
-          <div class="anime-card">
-            <div style="position: relative;">
-              <img src="${anime.imagen}" alt="${anime.titulo}" />
-              ${anime.etiqueta ? `<span class="etiqueta-estreno">${anime.etiqueta}</span>` : ''}
-            </div>
-            <div class="card-info">
-              <h3>${anime.titulo}</h3>
-              <div>
-                <span class="tipo">${anime.tipo}</span>
-                <span class="estado ${anime.estado}">${anime.anio} - ${anime.estadoTexto}</span>
-              </div>
+      const tarjeta = document.createElement('a');
+      tarjeta.href = anime.ruta;
+      tarjeta.className = 'anime-card-link';
+
+      tarjeta.innerHTML = `
+        <div class="anime-card">
+          <div style="position: relative;">
+            <img src="${datos.imagen}" alt="${anime.titulo}" />
+            ${datos.etiqueta ? `<span class="etiqueta-estreno">${datos.etiqueta}</span>` : ''}
+          </div>
+          <div class="card-info">
+            <h3>${anime.titulo}</h3>
+            <div>
+              <span class="tipo">${datos.tipo || 'Anime'}</span>
+              <span class="estado ${datos.estado}">${datos.anio} - ${datos.estadoTexto}</span>
             </div>
           </div>
-        `;
-
-        contenedor.appendChild(tarjeta);
-      });
-
-      // Renderizar botones de paginación
-      renderizarPaginacion(totalPages);
-
-    } catch (error) {
-      console.error('❌ Error al cargar los animes:', error);
-      document.getElementById('catalogo').innerHTML = `
-        <p style="color: red; text-align: center;">
-          Error al cargar los animes: ${error.message}
-        </p>
+        </div>
       `;
+
+      contenedor.appendChild(tarjeta);
     }
+
+    // Renderizar botones de paginación
+    renderizarPaginacion(totalPages);
+
+  } catch (error) {
+    console.error('❌ Error al cargar los animes:', error);
+    document.getElementById('catalogo').innerHTML = `
+      <p style="color: red; text-align: center;">
+        Error al cargar los animes: ${error.message}
+      </p>
+    `;
   }
+}
+
+// === FUNCIÓN NUEVA: Buscar en Jikan ===
+async function buscarEnJikan(titulo) {
+  try {
+    const response = await fetch(
+      `https://api.jikan.moe/v4/anime?q=${encodeURIComponent(titulo)}&limit=1`
+    );
+    const data = await response.json();
+
+    if (data.data && data.data.length > 0) {
+      const anime = data.data[0];
+      return {
+        imagen: anime.images.jpg.image_url || 'assets/imagenes/placeholder.jpg',
+        tipo: anime.type || 'Anime',
+        anio: anime.year || '----',
+        estado: anime.status === 'Currently Airing' ? 'verde' : 'rojo',
+        estadoTexto: anime.status === 'Currently Airing' ? 'En emisión' : 'Finalizado',
+        etiqueta: anime.airing ? 'Estreno' : ''
+      };
+    }
+  } catch (error) {
+    console.warn(`⚠️ No se encontró "${titulo}" en Jikan`);
+  }
+
+  return {
+    imagen: 'assets/imagenes/placeholder.jpg',
+    tipo: 'Anime',
+    anio: '----',
+    estado: 'rojo',
+    estadoTexto: 'Desconocido',
+    etiqueta: ''
+  };
+}
 
   function renderizarPaginacion(totalPages) {
     const container = document.getElementById('page-buttons');
