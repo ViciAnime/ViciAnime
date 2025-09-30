@@ -216,59 +216,91 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentPage = 1;
   const itemsPerPage = 21; // 3 filas × 7 animes
 
-  async function cargarAnimes(pagina = 1) {
-    try {
-      console.log(`🔍 Cargando página ${pagina}...`);
-      const response = await fetch('animes.json');
-      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-      const animes = await response.json();
-      const totalPages = Math.ceil(animes.length / itemsPerPage);
+// === FUNCIÓN PARA BUSCAR IMAGEN EN JIKAN ===
+async function buscarImagenEnJikan(titulo) {
+  try {
+    const response = await fetch(
+      `https://api.jikan.moe/v4/anime?q=${encodeURIComponent(titulo)}&limit=1`
+    );
+    const data = await response.json();
 
-      // Calcular rango de animes para esta página
-      const startIndex = (pagina - 1) * itemsPerPage;
-      const endIndex = Math.min(startIndex + itemsPerPage, animes.length);
-      const animesPagina = animes.slice(startIndex, endIndex);
+    if (data.data && data.data.length > 0) {
+      return data.data[0].images.jpg.image_url;
+    }
+  } catch (error) {
+    console.warn(`⚠️ No se encontró imagen para "${titulo}"`);
+  }
 
-      // Renderizar animes
-      const contenedor = document.getElementById('catalogo');
-      contenedor.innerHTML = '';
+  // Imagen por defecto si no se encuentra
+  return 'assets/imagenes/placeholder.jpg';
+}
 
-      animesPagina.forEach(anime => {
-        const tarjeta = document.createElement('a');
-        tarjeta.href = anime.ruta;
-        tarjeta.className = 'anime-card-link';
+// === CARGA DINÁMICA DE ANIMES CON PAGINACIÓN Y JIKAN ===
+let currentPage = 1;
+const itemsPerPage = 21; // 3 filas × 7 animes
 
-        tarjeta.innerHTML = `
-          <div class="anime-card">
-            <div style="position: relative;">
-              <img src="${anime.imagen}" alt="${anime.titulo}" loading="lazy" />
-              ${anime.etiqueta ? `<span class="etiqueta-estreno">${anime.etiqueta}</span>` : ''}
-            </div>
-            <div class="card-info">
-              <h3>${anime.titulo}</h3>
-              <div>
-                <span class="tipo">${anime.tipo}</span>
-                <span class="estado ${anime.estado}">${anime.anio} - ${anime.estadoTexto}</span>
-              </div>
+async function cargarAnimes(pagina = 1) {
+  try {
+    console.log(`🔍 Cargando página ${pagina}...`);
+    const response = await fetch('animes.json');
+    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+    const animes = await response.json();
+    const totalPages = Math.ceil(animes.length / itemsPerPage);
+
+    // Calcular rango de animes para esta página
+    const startIndex = (pagina - 1) * itemsPerPage;
+    const endIndex = Math.min(startIndex + itemsPerPage, animes.length);
+    const animesPagina = animes.slice(startIndex, endIndex);
+
+    // Renderizar animes
+    const contenedor = document.getElementById('catalogo');
+    contenedor.innerHTML = '';
+
+    // Procesar cada anime con imagen de Jikan
+    for (const anime of animesPagina) {
+      // Obtener imagen de Jikan (prioridad) o usar la local
+      let imagenUrl = anime.imagen;
+
+      // Si no tiene imagen local o es placeholder, buscar en Jikan
+      if (!imagenUrl || imagenUrl.includes('placeholder') || imagenUrl.includes('assets/')) {
+        imagenUrl = await buscarImagenEnJikan(anime.titulo);
+      }
+
+      const tarjeta = document.createElement('a');
+      tarjeta.href = anime.ruta;
+      tarjeta.className = 'anime-card-link';
+
+      tarjeta.innerHTML = `
+        <div class="anime-card">
+          <div style="position: relative;">
+            <img src="${imagenUrl}" alt="${anime.titulo}" loading="lazy" />
+            ${anime.etiqueta ? `<span class="etiqueta-estreno">${anime.etiqueta}</span>` : ''}
+          </div>
+          <div class="card-info">
+            <h3>${anime.titulo}</h3>
+            <div>
+              <span class="tipo">${anime.tipo}</span>
+              <span class="estado ${anime.estado}">${anime.anio} - ${anime.estadoTexto}</span>
             </div>
           </div>
-        `;
-
-        contenedor.appendChild(tarjeta);
-      });
-
-      // Actualizar paginación
-      renderizarPaginacion(totalPages, pagina);
-
-    } catch (error) {
-      console.error('❌ Error al cargar los animes:', error);
-      document.getElementById('catalogo').innerHTML = `
-        <p style="color: red; text-align: center;">
-          Error al cargar los animes: ${error.message}
-        </p>
+        </div>
       `;
+
+      contenedor.appendChild(tarjeta);
     }
+
+    // Actualizar paginación
+    renderizarPaginacion(totalPages, pagina);
+
+  } catch (error) {
+    console.error('❌ Error al cargar los animes:', error);
+    document.getElementById('catalogo').innerHTML = `
+      <p style="color: red; text-align: center;">
+        Error al cargar los animes: ${error.message}
+      </p>
+    `;
   }
+}
 
   function renderizarPaginacion(totalPages, paginaActual) {
     const container = document.getElementById('page-buttons');
