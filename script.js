@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
         card.className = 'anime-card';
         card.innerHTML = `
           <a href="${anime.enlace}">
-            <img src="assets/imagenes/placeholder.jpg" alt="${anime.nombre}" />
+            <img src="assets/imagenes/imageonline-co-placeholder-image.jpg" alt="${anime.nombre}" />
             <div class="anime-info">
               <span class="anime-title">${anime.nombre}</span>
               <span class="anime-meta">2023 - En emisión</span>
